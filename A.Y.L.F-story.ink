@@ -1,7 +1,42 @@
+/**
+ * @file A.Y.L.F-story.ink
+ * @title A Yves Les Flots Story
+ * @author GitHub Copilot
+ * @version 1.0
+ *
+ * @brief This Ink script outlines a narrative game where the player, as a pilot named Meli, delivers packages to the last inhabitants of a flooded archipelago called "Yves les flots".
+ *
+ * @description The story begins with a mission briefing from Meryl, establishing the player's role as a pilot for an organization called "le syndicat". The player's task is to deliver packages to the few remaining residents on different islands.
+ * The game is structured around a central hub (`vol`) from which the player can choose to visit various islands or consult a manual. Each island hosts unique characters with their own backstories, which are revealed through dialogue choices.
+ *
+ * The script uses a global variable `visitedIsland` to track the number of islands the player has successfully visited. This could be used to trigger different events or endings as the story progresses.
+ *
+ * ---
+ *
+ * ### Story Knots Overview:
+ *
+ * - **`introduction`**: The opening scene. Meli receives her mission briefing from Meryl. It sets the context of the world and the player's objective.
+ *
+ * - **`vol`**: The main hub of the game. From here, the player pilots the COLLAPS-40 plane and can choose which island to visit next or to read the manual. This knot acts as the central point to which the story returns after each island visit.
+ *
+ * - **`manuel`**: An in-game manual written by "docteur boogie love". It contains lore, character descriptions (Boogie Love, petite jean, vieux jean, Karim & Huguette), and game control instructions. It serves as a guide for the player.
+ *
+ * - **`bosquet`**: The knot for the island where "pet.ite jean" resides. This character is a young, tech-savvy individual trying to build machines and communicate with aliens. The dialogue explores their relationship with their grandfather and their ambitions.
+ *
+ * - **`bistro`**: The knot for the island with the bistro "Le Gamberge", inhabited by two syndicate veterans, Karim and Huguette. Conversations here reveal the history of the syndicate, the war against the "ancien régime", and personal stories of loss and camaraderie.
+ *
+ * - **`disquaire`**: The knot for the island of "docteur boogie love", a music and sound enthusiast who maintains the local radio and the COLLAPS-40 plane. This section delves into the history of the COLLAPS technology and the inventor, Eleone von kerk.
+ *
+ * - **`ferme`**: The knot for the island where "vieux jean" lives. He is a farmer who is deeply suspicious of the syndicate and its technology ("les ondes"). Dialogue with him uncovers his role in the past resistance and his belief in an alien cow.
+ *
+ * ### Global Variables:
+ *
+ * - **`VAR visitedIsland = 0`**: An integer that increments each time the player completes a delivery to an island. It tracks the player's progress through the main missions.
+ *
+ */
 -> introduction
 VAR visitedIsland = 0
 === introduction
-
 
 Dans une pièce noir, une radio repose sur une table vide.
 *[ communiquer avec le microphone ]-> intro
