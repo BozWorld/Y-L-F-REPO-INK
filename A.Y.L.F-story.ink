@@ -34,164 +34,254 @@
  * - **`VAR visitedIsland = 0`**: An integer that increments each time the player completes a delivery to an island. It tracks the player's progress through the main missions.
  *
  */
--> introduction
+
 VAR visitedIsland = 0
+VAR petite_jean_visited = false
+VAR boogie_love_visited = false
+VAR karim_huguette_visited = false
+VAR vieux_jean_visited = false
+
+-> introduction
+
 === introduction
 
-Dans une pièce noir, une radio repose sur une table vide.
-*[ communiquer avec le microphone ]-> intro
-= intro
-"1 2 , 1 2...CIEL BLEUE ET TEMPS MAGNIFIQUE
-TEMPÉRATURE PARADISIAQUE. NE VOUS INQUIETEZ PAS
-HABITANT DE YVES LES FLOTS, VOTRE SERVITRICE EST LA POUR VOUS"
+Dans une pièce noir, une radio repose sur une caisse métallique.
 
-*[interruption] -> interruption
+*[ communiquer avec le microphone ]
+      -> intro
+= intro
+"1, 2... 1, 2...CIEL BLEUE ET TEMPS ET TEMPËRATURE PARADISIAQUE !
+NE VOUS INQUIETEZ PAS, HABITANT DE YVES LES FLOTS
+VOTRE SERVITRICE EST LÀ POUR VOUS !!!!"
+
+*[interruption] 
+      -> interruption
+
 ->END
 
 = interruption
-soudain la radio fait un bruit étrange comme si elle changeait seule de fréquence
-1 2, 1 2...ici meryl pour l'unité d'accompagnement du COLLAPS-40...
-Meli il va falloir arreter d'utiliser la radio comme ton jouet personnel,
-a yves il reste encore des habitant opposé au projet du syndicat, on essaye de se faire accepter 
-fait plus profil bas !!
-bref...Meli c'est ta dernière mission. Il faudra livrer des colis au dernier habitant de l'ile, l'avion ne peux pas faire deux voyage d'affilé.
-On va passer a rapide brief de la mission si tu es OK ?
-* [brief mission] -> brief
+#radio_interface
+
+la radio grésille avant de se stabiliser sur une fréquence claire.
+1, 2... ici meryl, unité d'accompagnement du COLLAPS-40...
+Meli, il va falloir arreter d'utiliser la radio comme ton jouet perso.
+A Yves, il reste encore des habitants opposés au projet du syndicat 
+on essaye de se faire accepter - fait plus profil bas, ok ?"
+
+"Bon... C'est ta dernière mission.
+Tu dois livrer des colis aux derniers habitants.
+L'avion ne pourra pas faire plusieurs allez-retour d'affilé.
+On va passer à un rapide brief de la mission si tu es OK ?
+
+* [Raconte moi tout] -> brief
 
 = brief
-"Yves les flot subit une inondation depuis des années. Les différents habitants sont déjà partie de l'ile.
-ils en reste quelqu'un...qui attendent le déluge? L'option du relogement a été ábandonné
-les dernier habitants sont fortement opposé tant que l'ile tiens, et ça jouerai en notre défaveur dans l'opinion.
-Mais les habitant recevoient périodiquement des colis des anciens habitant.
-tu as accés a un manuel que docteur boogie love a écrit contenant les informations sur chaque ile, et ses habitant.
-Référe toi a lui pour te déplacer...c'est bon?
+"Yvelines-les-Flots est en train de se noyer depuis des années.
+Les habitants sont quasiment tous partis.
+Mais quelques irréductibles attendent le déluge.  
+Ils ont refusé tout relogement."
 
-* [ c'est bon ] -> done
+"Politiquement, c’est tendu.  
+On essaie de ne pas trop attirer l’attention, mais eux reçoivent encore des colis  
+de proches ou d’anciens camarades."
 
-=done
-" OUI OK ...oui d'accord meryl merci pour ton aide, c'est cool que tu prennes le temps de m'accompagner.
-MAIS C'EST BON, tout est compris, je checkerai le manuel ! PROMIS je ferai aucune betise.
-MAIS COLLAPS-40 m'attend et le ciel aussi ! je dois faire chauffer la machine, et profiter de ce ciel !!
-bref message bien reçu, merci Meryl et a bientot je te rappelle a la fin du premier voyage!!!!
-fin de communication"
+"Tu as accès au manuel de Boogie-Love,  
+avec les infos sur les îles et leurs habitants.  
+Réfère-toi à ça pour les livraisons."
 
-* [ meryl reprend ] -> intro_end
+* [Ok, j’ai tout retenu]
+    -> done
+
+= done
+"OUI OUI OUI, message reçu Meryl !
+
+Merci pour ton aide, c’est cool que tu m’accompagnes.  
+Mais t’inquiète, je vais checker le manuel, et je vais faire AUCUNE bêtise."
+
+"COLLAPS-40 m’attend, le ciel aussi.  
+Je fais chauffer la machine. Merci Meryl ! À tout à l’heure !"
+
+* [Meryl reprend une dernière fois]
+    -> intro_end
 
 = intro_end
-"bon voyage meli...et...oublie pas de te reposer Meli...vraiment...bref fin de communication"
+"...Bon voyage Meli.  
+Et... oublie pas de te reposer, vraiment.  
+Fin de communication."
+
+* [Faire chauffer le moteur]
+    -> vol
 
 
-* [faire chauffer le moteur ] -> vol
-
+-> vol
 
 === vol
-depuis le hangar du syndicat, qui sert de point d'entrée a l'archipel, Meli, met les clés dans le COLLAPS-40 
-un petit avion servant a l'entretiens des radio 
-{visitedIsland < 2:
-    This is written if yourVariable is true.
-  - else:
-    Otherwise this is written.
+
+{visitedIsland == 0:
+    // PREMIER VOL — DÉPART DU HANGAR
+    "Le hangar s’ouvre lentement, laissant place à un ciel d’un bleu éclatant.
+    C’est le moment. Le moteur vrombit doucement alors que Meli prend de l'altitude.
+    Les premières notes d’une vieille chanson résonnent dans la radio..."
+- else:
+    // TOUS LES AUTRES VOLS
+    "Meli redécolle. Le ciel est plus lourd cette fois-ci.
+    Le vent souffle un peu plus fort, ou est-ce juste dans sa tête ?"
 }
 
-*[ ouvrir le manuel ] -> manuel
+-> choix_destination
 
-*[ s'approcher du de l'ile avec une étrange lumière rouge ] -> bosquet
+=== choix_destination
 
-*[ s'approcher de l'ile qui émet une étrange musique ] -> bistro
+{visitedIsland == 2:
+    -> retour_hub
+- else:
+    {visitedIsland == 4:
+        -> retour_final
+    - else:
+        -> destination_normale
+    }
+}
 
-*[ s'approcher de l'ile au moulin ] -> disquaire
+=== retour_hub
+"Deux livraisons accomplies. Il est temps de rentrer au hub principal pour faire le point."
+-> vol
 
-*[ s'approcher de l'ile avec un petit batiment ] -> ferme
+=== retour_final
+"C’était la dernière livraison. Il est temps de rentrer... une dernière fois."
+-> final
 
--> END
+=== final
+"Merci d'avoir utilisé le COLLAPS-40. À bientôt dans le ciel !"
+
+=== destination_normale
+"Vers quelle île Meli souhaite-t-elle aller ?"
+    * {petite_jean_visited == false} [Aller vers l’île de Pet.ite Jean] 
+        ~ petite_jean_visited = true
+        ~ visitedIsland += 1
+        -> bosquet
+
+    * {boogie_love_visited == false} [Aller vers la boutique CRAZY-LOVE]
+        ~ boogie_love_visited = true
+        ~ visitedIsland += 1
+        -> disquaire
+
+    * {karim_huguette_visited == false} [Aller au bistrot de Karim et Huguette]
+        ~ karim_huguette_visited = true
+        ~ visitedIsland += 1
+        -> bistro
+
+    * {vieux_jean_visited == false} [Aller à la ferme du Vieux Jean]
+        ~ vieux_jean_visited = true
+        ~ visitedIsland += 1
+        -> ferme
+
+...
+* [ouvrir manuel] 
+    -> manuel
 
 === manuel
 
 -> page1
 
-=page1
+= page1
 
-hello routeur du ciel !! ce manuel, est un manuel SPECIAL, conçu par mes soins pour les besoin des habitants de l'ile !! ( les 3 habitants ) il y a une quatrième page pour ...un presque habitant ?
-chaque page est dédié a l'un d'entre eue mais tu peux aussi regarder les controles de l'avion si tu tu n'es plus sur de comment naviguer avec un COLLAPS-40.  
-*[voir les controles] -> control
-*[lire la description de boogie love] -> boogie
-*[lire la description de petite jean] -> petite_jean
-*[lire la description de vieux jean] -> vieux_jean
-*[lire la description de karim et huguette] -> karim_huguette 
-*[décoller] -> vol
-=control
+Hello routeur du ciel !! Ce manuel est un manuel **spécial**, conçu par mes soins pour les besoins des habitants de l’île ! (Enfin... les 3 résidents officiels. Y a une quatrième page pour un presque-résident ? 👀)
 
-Le COLLAPS-40 est une machine qui fonctionne graçe au onde radio du système mère COLLAPS !
-il se manipule assez simplement, plus léger que les précédente éditions ( et ne faisont pas pleuvoir de bombe par ailleur )
-pour activer le vaisseaux le moteur et prendre en vitesse c'est RB ! pour baissez la vitesse c'est LT !
-l'avion ne décolle pas tant que tu as pas pris suffisament en vitesse, une fois fait tu es libre de planer ou tu veux !
-avec le joystick gauche  en le déplaçant de droite a gauche tu peux orienter 40 , gaffe au piquet ! toujours avec le joystick gauche, de haut en bas tu peux piquer ou faire planner l'avion.
-pour atterir sur une ile, tu as juste a te poser sur l'eau autour, a partir d'une certaine vitesse, 40 s'aligne automatiquement avec la rotation de l'ile !
-Par contre notre tour radio a yves les flot est assez rudimentaire ! au bout de deux voyage tu sera obliger de retourner a l'hangar.
-c'est tout pour les explication de controle du 40 ! bon voyage et reste funky !
-*[lire la description de boogie love] -> boogie
-*[lire la description de petite jean] -> petite_jean
-*[lire la description de vieux jean] -> vieux_jean
-*[lire la description de karim et huguette] -> karim_huguette 
-*[décoller] -> vol
+Chaque page est dédiée à l’un·e d’entre eux, mais tu peux aussi regarder les **contrôles** du COLLAPS-40 si tu sais plus comment voler.
 
-=boogie
+* [Voir les contrôles] -> control
+* [Lire la description de Boogie-Love] -> boogie
+* [Lire la description de Pet.ite Jean] -> petite_jean
+* [Lire la description du Vieux Jean] -> vieux_jean
+* [Lire la description de Karim et Huguette] -> karim_huguette
+* [Décoller] -> vol
 
-INFORMATION RÉSIDENT : le docteur boogie-love est un excentrique...c'est moi hehehehe, j'espère t'avoir surpris !
-je suis fan de musique, et j'ai une histoire très mystérieuse viens que je te la raconte.
+= control
 
-INFORMATION LIEU : j'habite sur l'ile la plus cool du coin, celle avec tout pleins de disque, et une super enseigne tu ne peux pas la louper...fin si vu que il y a 2 enseigne ici, mais c'est celle en forme de disque ! c'est celui du disquaire que je tiens, il fonctionne du feu de dieux !
+Le COLLAPS-40 fonctionne grâce aux ondes radio du système-mère COLLAPS !
+Il est plus léger que les anciennes versions (et, bonne nouvelle, **il ne balance pas de bombes**).
 
-COLIS A LIVRÉ : le colis scéllé par le syndicat c'est le mien, amène le moi et je satisferai ta curiosité.
-*[voir les controles] -> control
-*[lire la description de petite jean] -> petite_jean
-*[lire la description de vieux jean] -> vieux_jean
-*[lire la description de karim et huguette] -> karim_huguette 
-*[décoller] -> vol
+- **Accélérer** : gâchette RB
+- **Ralentir** : gâchette LT
 
-=petite_jean
+L’avion ne décolle que quand tu as assez de vitesse. Ensuite, libre à toi de planer !
 
-INFORMATION RÉSIDENT : pet.ite jean n'es pas un résident de l'ile ! il viens régulièrement ici voir son grand père vieux jean. 
-c'est a.une solitair.e mais iel s'entend bien avec son grand père, toujours entraind de bidouiller des machin des trucs, ce.tte gam.ine a du potentiel !
+Le joystick gauche sert à :
+- Gauche/Droite → orientation
+- Haut/Bas → monter ou piquer
 
-INFORMATION LIEU : cet ilot est entouré d'arbes, et de matériel technique ! le gamin a ramener tout son matos et c'est installé ici...fais gaffe a ce qu'il parait avant y'avais des mines ici, mais bon le.a gam.ine est toujours en vie donc ça devrais aller !
+Pour atterrir, pose-toi simplement sur l’eau autour d’une île. À partir d’une certaine vitesse, 40 s’aligne automatiquement à l’île.
 
-COLIS A LIVRÉ : ( a ne pas communiquer au syndicat ) ( c'est moi qui le commande pour lui ) ( je serai dans la merde si tu me dénonce ) iel a besoin reçu du matériel, technique et de soudure ! le.a gam.ine est malin.igne ! iel a du potentiel ! faut le laisser cuisiner !
+**⚠ Attention** : la tour radio de Yvelines est rudimentaire. Après deux voyages, tu seras obligé·e de revenir au hangar.
 
-*[lire la description de boogie love] -> boogie
-*[lire la description de vieux jean] -> vieux_jean
-*[lire la description de karim et huguette] -> karim_huguette 
-*[décoller] -> vol
+C’est tout pour les contrôles ! Bon vol et reste funky ✈️💿
 
-=vieux_jean
+* [Lire la description de Boogie-Love] -> boogie
+* [Lire la description de Pet.ite Jean] -> petite_jean
+* [Lire la description du Vieux Jean] -> vieux_jean
+* [Lire la description de Karim et Huguette] -> karim_huguette
+* [Décoller] -> vol
 
-INFORMATION RÉSIDENT : le type le plus old-school du coin ! il tiens une ferme, et il est toujours aigris ! c'est le grand père de vieux jean, il est fermé mais très sympa ! croit pas trop ces histoire de vache qui parle il se fait vieux je pense.
+= boogie
 
-INFORMATION LIEU : l'ile du vieux jean est la plus normal de yves les flots, un champs avec une ferme, du bétail et un moulin ! 
+**INFORMATION RÉSIDENT** : Docteur Boogie-Love est un excentrique... c’est moi ! Hehehe. J’espère t’avoir surpris·e.
+Je suis fan de musique, et j’ai une histoire mystérieuse à raconter !
 
-COLIS A LIVRÉ : Le vieux attend de l'engrais et une lettre de sa fille !
+**INFORMATION LIEU** : J’habite sur l’île la plus cool. Y a plein de disques et une enseigne géante en forme de disque (pas celle en forme de coquille Saint-Jacques — l’autre !).
+C’est là que je tiens mon disquaire "**CRAZY-LOVE**". Du feu de dieu !
 
-*[voir les controles] -> control
-*[lire la description de boogie love] -> boogie
-*[lire la description de petite jean] -> petite_jean
-*[lire la description de karim et huguette] -> karim_huguette 
-*[décoller] -> vol
+**COLIS À LIVRER** : Le colis scellé par le Syndicat, c’est pour moi. Apporte-le et je satisferai ta curiosité...
 
-=karim_huguette
+* [Lire la description de Pet.ite Jean] -> petite_jean
+* [Lire la description du Vieux Jean] -> vieux_jean
+* [Lire la description de Karim et Huguette] -> karim_huguette
+* [Voir les contrôles] -> control
+* [Décoller] -> vol
+
+= petite_jean
+
+**INFORMATION RÉSIDENT** : Pet.ite Jean n’est pas résident·e permanent·e, mais iel vient souvent voir son grand-père (le Vieux Jean). 
+Introverti·e, bricoleur·euse, iel a du potentiel. Toujours en train de bidouiller des trucs !
+
+**INFORMATION LIEU** : Un îlot entouré d’arbres et de matos technique. Pet.ite Jean y a installé sa cabane. Attention : avant, c’était une zone minée... mais iel est toujours vivant·e, donc ça devrait aller !
+
+**COLIS À LIVRER** : (À NE PAS COMMUNIQUER AU SYNDICAT) C’est moi qui le commande pour iel. Y a du matos de soudure et d’électronique. Iel est malin·igne. Laisse-iel bricoler !
+
+* [Lire la description de Boogie-Love] -> boogie
+* [Lire la description du Vieux Jean] -> vieux_jean
+* [Lire la description de Karim et Huguette] -> karim_huguette
+* [Décoller] -> vol
+
+= vieux_jean
+
+**INFORMATION RÉSIDENT** : Le plus old-school du coin. Il tient une ferme, râle tout le temps, mais il est pas méchant. C’est le grand-père de Pet.ite Jean. 
+Il parle à ses vaches... ouais. Faut le laisser tranquille.
+
+**INFORMATION LIEU** : Une île classique : un champ, une ferme, du bétail, un moulin. Simple et rustique.
+
+**COLIS À LIVRER** : Une lettre de sa fille et un peu d’engrais. Rien de bien fou, mais ça compte.
+
+* [Lire la description de Boogie-Love] -> boogie
+* [Lire la description de Pet.ite Jean] -> petite_jean
+* [Lire la description de Karim et Huguette] -> karim_huguette
+* [Voir les contrôles] -> control
+* [Décoller] -> vol
+
+= karim_huguette
+
+**INFORMATION RÉSIDENT** : Deux anciens soldats. Ils vivaient ici avant l’inondation mais sont partis faire la guerre contre l’ancien régime. Revenus changés... et probablement bien éméchés 😅
+
+**INFORMATION LIEU** : Le bistrot "**La Gamberge**". Impossible de le rater : y a des chaises et des tables dehors. Va boire un coup avec eux !
+
+**COLIS À LIVRER** : Une lettre et une caisse d’alcool. Les classiques du réconfort.
+
+* [Lire la description de Boogie-Love] -> boogie
+* [Lire la description de Pet.ite Jean] -> petite_jean
+* [Lire la description du Vieux Jean] -> vieux_jean
+* [Voir les contrôles] -> control
+* [Décoller] -> vol
 
 
-INFORMATION RÉSIDENT : c'est pas 1 mais 2 résident, ils vennaient d'ici avant l'inondation, mais ils sont parti il y a quelque année pour servir dans la guerre contre l'ancien régime. ils sont surement complétement bourré ! c'est dans leurs personnalité.
-
-INFORMATION LIEU : il traine au bistro la gamberge ! tu peux pas te louper c'est le seule bistro du coin ( et quel bistro ), tu peux voir des chaisse et des tables a l'entrée, pose toi boire un verre !
-
-COLIS A LIVRÉ : je crois bien qu'il attendent juste une caisse d'alcool et lettre.
-
-*[voir les controles] -> control
-*[lire la description de boogie love] -> boogie
-*[lire la description de petite jean] -> petite_jean
-*[lire la description de vieux jean] -> vieux_jean
-*[décoller] -> vol
--> END
 
 === bosquet
 tu arrives au dessus d'une ile verdoyante, remplie d'arbre, au milieux des arbres tu peux reconnaitre un étrange tank rouge qui n'as plus l'air fonctionnel, dessus un.e enfant fixe le ciel sans rien dire, iel est entouré de pleins d'outils de construction, de modification et autre
