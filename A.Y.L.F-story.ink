@@ -4,7 +4,38 @@
  * @author GitHub Copilot
  * @version 1.0
  *
- * @brief This Ink script outlines a narrative game where the player, as a pilot named Meli, delivers packages to the last inhabitants of a flooded archipelago called "Yves les flots".
+ * @brief This Ink script outlines a na=== retour_final
+"C'était la dernière livraison. Il est temps de rentrer... une dernière fois."
+-> interlude2
+
+=== final
+// Structure de la fin du jeu - à compléter par le créateur
+"Le soleil se couche sur Yvelines-les-Flots. Meli regarde une dernière fois l'archipel 
+depuis le cockpit de son avion. Les vagues montent déjà, avalant lentement 
+les derniers vestiges d'une histoire qui s'efface."
+
+"La radio grésille..."
+
+* [Répondre à l'appel] -> final_radio
+* [Rester silencieuse] -> final_silence
+
+= final_radio
+"Ici Meryl. Mission accomplie, Meli. Tu peux rentrer maintenant."
+
+* [Continuer] -> final_conclusion
+
+= final_silence
+Les pensées de Meli dérivent vers tous ces gens qu'elle a rencontrés...
+Leurs histoires continueront de vivre, même quand l'eau aura tout recouvert.
+
+* [Continuer] -> final_conclusion
+
+= final_conclusion
+// À compléter avec le texte de fin définitif
+
+"Merci d'avoir joué à Yvelines-les-Flots."
+
+-> ENDe game where the player, as a pilot named Meli, delivers packages to the last inhabitants of a flooded archipelago called "Yves les flots".
  *
  * @description The story begins with a mission briefing from Meryl, establishing the player's role as a pilot for an organization called "le syndicat". The player's task is to deliver packages to the few remaining residents on different islands.
  * The game is structured around a central hub (`vol`) from which the player can choose to visit various islands or consult a manual. Each island hosts unique characters with their own backstories, which are revealed through dialogue choices.
@@ -144,7 +175,7 @@ Fin de communication."
 
 === retour_hub
 "Deux livraisons accomplies. Il est temps de rentrer au hub principal pour faire le point."
--> vol
+-> interlude1
 
 === retour_final
 "C’était la dernière livraison. Il est temps de rentrer... une dernière fois."
@@ -356,7 +387,6 @@ Je l'ai réamménager, modifier pour que ce soit comme uen cabane...un peu spéc
 je préfère les cabanes un peu spéciale a vrai dire.
 
 *[ lui poser d'autre question] -> question
-->bosquet
 
 = vieux
 Oui...plus ou moin ? Grand père aime pas trop s'expliquer alors il me demande pas d'explication.
@@ -754,8 +784,6 @@ Alors on vous apprend rien de l'histoire de notre ile au syndicat ! il y a quelq
 Je deteste le syndicat, je suis persuadé qu'il cache des choses avec les ondes ! mais l'ancien régime as fait bien plus de mal a la population de yves les flots. La résistance étais composé majoritairement de petit venu des iles alentour ! je pouvais pas collaborer avec ces pourris du gouvernement
 
 *[ lui posez une autre question ] -> ferme_question
-~ visitedIsland += 1
--> vol
 
 =mefiance 
 
@@ -822,7 +850,46 @@ Merci gamine pour les engrais, repasse manger je te ferai quelque chose qui n'as
 
 *[ retourner dans l'avions ] -> vol
 
-=== interlude
+=== interlude1
+// Premier interlude - se déclenche après avoir visité deux îles
+"De retour au hangar principal, Meli prend un moment pour souffler. 
+La radio grésille doucement."
 
-->vol
+* [Répondre à la radio] -> interlude1_radio
+* [L'ignorer et continuer sa mission] -> vol
+
+= interlude1_radio
+"Ici Meryl. Comment ça se passe, Meli ? Les habitants ne sont pas trop difficiles ?"
+
+* ["Tout va bien, c'est... intéressant."] -> interlude1_fin
+* ["J'ai encore du mal à comprendre ce qui se passe ici."] -> interlude1_fin
+
+= interlude1_fin
+"Fais attention à toi. Ces gens ont leurs histoires, leurs blessures... 
+Rappelle-toi qu'on est juste là pour livrer des colis, pas pour s'immiscer dans leurs affaires."
+
+"Bon, je te laisse reprendre ta mission. Fin de communication."
+
+* [Retourner à l'avion] -> vol
+
+=== interlude2
+// Second interlude - se déclenche avant la fin du jeu
+"Le ciel est plus sombre maintenant. La livraison touche à sa fin.
+Meli regarde une dernière fois l'archipel qui va bientôt disparaître."
+
+* [Contacter Meryl par radio] -> interlude2_radio
+* [Rester silencieuse et contempler le paysage] -> interlude2_fin
+
+= interlude2_radio
+"Meryl... j'ai presque fini. C'est... étrange de savoir que tout ça va disparaître."
+
+"Je sais, Meli. C'est toujours comme ça. On s'attache aux lieux, aux gens, puis on doit partir. 
+C'est le cycle normal des choses."
+
+* [Continuer] -> interlude2_fin
+
+= interlude2_fin
+"Il est temps d'achever cette mission et de tourner la page."
+
+* [Retourner à l'avion pour la dernière fois] -> vol
 
