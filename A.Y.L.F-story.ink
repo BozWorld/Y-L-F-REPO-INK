@@ -4,9 +4,100 @@
  * @author GitHub Copilot
  * @version 1.0
  *
- * @brief This Ink script outlines a na=== retour_final
+ * @brief This Ink script outlines a na=== vol
+
+{visitedIsland == 0:
+    // PREMIER VOL — D=== vol
+
+{visitedIsland == 0:
+    // PREMIER VOL — DÉPART DU HANGAR
+    "Le hangar s'ouvre lentement, laissant place à un ciel d'un bleu éclatant.
+    C'est le moment. Le moteur vrombit doucement alors = karim_huguette
+
+**INFORMATION RÉSIDENT** : Deux anciens soldats. Ils vivaient ici avant l'inondation mais sont partis faire la guerre contre l'ancien régime. Revenus changés... et probablement bien éméchés 😅
+
+**INFORMATION LIEU** : Le bistrot "**La Gamberge**". Impossible de le rater : y a des chaises et des tables dehors. Va boire un coup avec eux !
+
+**COLIS À LIVRER** : Une lettre et une caisse d'alcool. Les classiques du réconfort.
+
+* [Lire la description de Boogie-Love] -> boogie
+* [Lire la description de Pet.ite Jean] -> petite_jean
+* [Lire la description du Vieux Jean] -> vieux_jean
+* [Voir les contrôles] -> control
+* [Décoller] -> voli prend de l'altitude.
+    Les premières notes d'une vieille chanson résonnent dans la radio..."
+- else:
+    {visitedIsland == 2 && TURNS_SINCE(-> interlude) == 0:
+        // RETOUR APRÈS L'INTERLUDE
+        "De retour dans les airs. L'horizon semble plus vaste maintenant. 
+        Meli se sent différente après cette conversation avec Meryl.
+        Il reste encore des histoires à découvrir."
+    - else:
+        {visitedIsland == 3:
+            // AVANT-DERNIER VOL
+            "L'avion s'élève dans les airs. Le ciel commence à prendre des teintes orangées. 
+            La journée avance et il ne reste plus qu'une destination à visiter.
+            La dernière livraison avant de conclure cette mission."
+        - else:
+            // RETOUR STANDARD APRÈS UNE LIVRAISON
+            "Meli redécolle. Le ciel est plus lourd cette fois-ci.
+            Le vent souffle un peu plus fort, ou est-ce juste dans sa tête ?"
+        }
+    }
+}
+
+-> choix_destinationR
+    "Le hangar s'ouvre lentement, laissant pla      * {petite_jean_visited == false} [Aller vers l'île de Pet.ite Jean] 
+        ~ petite_jean_visited = true
+        -> bosquet{petite_jean_visited == false} [Aller vers l'île de Pet.ite Jean] 
+        ~ petite_jean_visited = true
+        -> bosquet un ciel d'un bleu éclatant.
+    C'est le m= boogie
+
+**INFORMATION RÉSI= petite_jean
+
+**INFORMATION RÉSIDENT** : Pet.ite Jean n'est pas résident·e permanent·e, mais iel vient souvent voir son grand-père (le Vieux Jean). 
+"Introverti·e, bricoleur·euse, iel a du potentiel. Toujours en train de bidouiller des trucs !"
+
+**INFORMATION LIEU** : Un îlot entouré d'arbres et de matos technique. Pet.ite Jean y a installé sa cabane. 
+"Attention : avant, c'était une zone minée... mais iel est toujours vivant·e, donc ça devrait aller !"
+
+**COLIS À LIVRER** : (À NE PAS COMMUNIQUER AU SYNDICAT) C'est moi qui le commande pour iel. Y a du matos de soudure et d'électronique. Iel est malin·igne. Laisse-iel bricoler ! Docteur Boogie-Love est un excentrique... c'est moi ! Hehehe. J'espère t'avoir surpris·e.
+"Je suis fan de musique, et j'ai une histoire mystérieuse à raconter !"
+
+**INFORMATION LIEU** : J'habite sur l'île la plus cool. Y a plein de disques et une enseigne géante en forme de disque (pas celle en forme de coquille Saint-Jacques — l'autre !).
+"C'est là que je tiens mon disquaire '**CRAZY-LOVE**'. Du feu de dieu !"
+
+**COLIS À LIVRER** : Le colis scellé par le Syndicat, c'est pour moi. Apporte-le et je satisferai ta curiosité...
+
+-> boogie_choix
+
+= boogie_choix moteur vrombit doucement alors que Meli prend de l'altitude.
+    Les premières notes d'une vieille chanson résonnent dans la radio..."
+- else:
+    {visitedIsland == 2 && TURNS_SINCE(-> interlude) == 0:
+        // RETOUR APRÈS L'INTERLUDE
+        "De retour dans les airs. L'horizon semble plus vaste maintenant. 
+        Meli se sent différente après cette conversation avec Meryl.
+        Il reste encore des histoires à découvrir."
+    - else:
+        {visitedIsland == 3:
+            // AVANT-DERNIER VOL
+            "L'avion s'élève dans les airs. Le ciel commence à prendre des teintes orangées. 
+            La journée avance et il ne reste plus qu'une destination à visiter.
+            La dernière livraison avant de conclure cette mission."
+        - else:
+            // RETOUR STANDARD APRÈS UNE LIVRAISON
+            "Meli redécolle. Le ciel est plus lourd cette fois-ci.
+            Le vent souffle un peu plus fort, ou est-ce juste dans sa tête ?
+            Elle pense aux rencontres qu'elle vient de faire."
+        }
+    }
+}
+
+-> choix_destinational
 "C'était la dernière livraison. Il est temps de rentrer... une dernière fois."
--> interlude2
+-> final
 
 === final
 // Structure de la fin du jeu - à compléter par le créateur
@@ -175,14 +266,40 @@ Fin de communication."
 
 === retour_hub
 "Deux livraisons accomplies. Il est temps de rentrer au hub principal pour faire le point."
--> interlude1
+-> interlude
 
 === retour_final
 "C’était la dernière livraison. Il est temps de rentrer... une dernière fois."
 -> final
 
 === final
-"Merci d'avoir utilisé le COLLAPS-40. À bientôt dans le ciel !"
+// Structure de la fin du jeu - à compléter par le créateur
+"Le soleil se couche sur Yvelines-les-Flots. Meli regarde une dernière fois l'archipel 
+depuis le cockpit de son avion. Les vagues montent déjà, avalant lentement 
+les derniers vestiges d'une histoire qui s'efface."
+
+"La radio grésille..."
+
+* [Répondre à l'appel] -> final_radio
+* [Rester silencieuse] -> final_silence
+
+= final_radio
+"Ici Meryl. Mission accomplie, Meli. Tu peux rentrer maintenant."
+
+* [Continuer] -> final_conclusion
+
+= final_silence
+Les pensées de Meli dérivent vers tous ces gens qu'elle a rencontrés...
+Leurs histoires continueront de vivre, même quand l'eau aura tout recouvert.
+
+* [Continuer] -> final_conclusion
+
+= final_conclusion
+// À compléter avec le texte de fin définitif
+
+"Merci d'avoir joué à Yvelines-les-Flots."
+
+-> END
 
 === destination_normale
 "Vers quelle île Meli souhaite-t-elle aller ?"
@@ -193,17 +310,14 @@ Fin de communication."
 
     * {boogie_love_visited == false} [Aller vers la boutique CRAZY-LOVE]
         ~ boogie_love_visited = true
-        ~ visitedIsland += 1
         -> disquaire
 
     * {karim_huguette_visited == false} [Aller au bistrot de Karim et Huguette]
         ~ karim_huguette_visited = true
-        ~ visitedIsland += 1
         -> bistro
 
     * {vieux_jean_visited == false} [Aller à la ferme du Vieux Jean]
         ~ vieux_jean_visited = true
-        ~ visitedIsland += 1
         -> ferme
 
 ...
@@ -850,46 +964,25 @@ Merci gamine pour les engrais, repasse manger je te ferai quelque chose qui n'as
 
 *[ retourner dans l'avions ] -> vol
 
-=== interlude1
-// Premier interlude - se déclenche après avoir visité deux îles
+=== interlude
+// Interlude - se déclenche après avoir visité deux îles
 "De retour au hangar principal, Meli prend un moment pour souffler. 
 La radio grésille doucement."
 
-* [Répondre à la radio] -> interlude1_radio
+* [Répondre à la radio] -> interlude_radio
 * [L'ignorer et continuer sa mission] -> vol
 
-= interlude1_radio
+= interlude_radio
 "Ici Meryl. Comment ça se passe, Meli ? Les habitants ne sont pas trop difficiles ?"
 
-* ["Tout va bien, c'est... intéressant."] -> interlude1_fin
-* ["J'ai encore du mal à comprendre ce qui se passe ici."] -> interlude1_fin
+* ["Tout va bien, c'est... intéressant."] -> interlude_fin
+* ["J'ai encore du mal à comprendre ce qui se passe ici."] -> interlude_fin
 
-= interlude1_fin
+= interlude_fin
 "Fais attention à toi. Ces gens ont leurs histoires, leurs blessures... 
 Rappelle-toi qu'on est juste là pour livrer des colis, pas pour s'immiscer dans leurs affaires."
 
 "Bon, je te laisse reprendre ta mission. Fin de communication."
 
 * [Retourner à l'avion] -> vol
-
-=== interlude2
-// Second interlude - se déclenche avant la fin du jeu
-"Le ciel est plus sombre maintenant. La livraison touche à sa fin.
-Meli regarde une dernière fois l'archipel qui va bientôt disparaître."
-
-* [Contacter Meryl par radio] -> interlude2_radio
-* [Rester silencieuse et contempler le paysage] -> interlude2_fin
-
-= interlude2_radio
-"Meryl... j'ai presque fini. C'est... étrange de savoir que tout ça va disparaître."
-
-"Je sais, Meli. C'est toujours comme ça. On s'attache aux lieux, aux gens, puis on doit partir. 
-C'est le cycle normal des choses."
-
-* [Continuer] -> interlude2_fin
-
-= interlude2_fin
-"Il est temps d'achever cette mission et de tourner la page."
-
-* [Retourner à l'avion pour la dernière fois] -> vol
 
