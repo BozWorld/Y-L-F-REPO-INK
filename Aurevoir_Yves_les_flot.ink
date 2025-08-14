@@ -463,8 +463,8 @@ tu finis par atterir sur un ilot, ou il est disposé quelque tables, et des chai
 proche d'un batiment qui prend la forme d'un bistro, tu reconnais une enseigne : LE GAMBERGE
 
 sur une table une femme et un homme discute une bouteille face a eue, tu remarques des élèments du syndicat, un peu partout.
-Un drapeau du syndicat qui flotte au gré du vent, sur une table grossièrement posé, tu peux voir une status du leader de la révolution.
-une affichage de propagande du syndicat du temps de la guerre est aussi exposé sur l'avant du bistro.
+Un drapeau du syndicat qui flotte au gré du vent, sur une table grossièrement posé, tu peux voir une status du leader de la révolution. érigée après la guerre contre l'Ordre défeline.
+une affichage de propagande du …propagande du Syndicat pendant la guerre contre l’Ordre Défeline est aussi exposé sur l'avant du bistro.
 
 *[Commencer à lui poser des questions] -> bistro_question
 
@@ -481,8 +481,7 @@ Pas sûr qu’il faille trop traîner ici…
 
 = bouteille
 « Oh, tu sais, quand t'as plus grand-chose à faire et une bonne amie avec toi, la boisson devient vite une option acceptable. 
-Ici, y'a rien à faire — faut bien s'occuper, alors parfois on organise des apéros. » répond Karim.
-
+Faut bien s'occuper, alors parfois on organise des apéros. » répond Karim.
 Huguette renchérit, un peu piquée : « Oh, la gamine, nous juge pas parce que t'as enfilé le costume ! 
 Nous aussi on est passés par là — on regardait pas les gens de haut. »
 
@@ -505,13 +504,47 @@ Karim se remet à rire aux éclats.
 
 = folle_2
 Il se retourne vers toi, tout fier, il pointe le drapeau. Huguette prend la parole.
-
-« Et ouais, gamine — figure-toi qu'on est d'anciens soldats du Syndicat, ouais ! 
-On est partis quand on était jeunes. On a aidé à repousser l'armée de l'ancien régime. 
-Sois sûr·e qu'ils ne viendront plus nous embêter !
-Maintenant on se la coule douce, on se repose et on repense aux bons vieux temps, quand on se battait contre les fascistes de deFeline. »
-
+« Et ouais, gamine — figure-toi qu'on est d'anciens soldats du Syndicat, ehhhh ouais ! 
+On est partis quand on était jeunes. 
+On a aidé à repousser l’armée de DeFeline.
+Après la victoire contre DeFeline, le Parti pour la Nation a pris le pouvoir. On croyait à leurs promesses, mais ça n’a pas duré.»
+elle marque un temps d'hésitation. boit un coups et reprend 
+«...en tout cas Sois sûr qu'ils ne viendront plus nous embêter !
+Maintenant on se la coule douce, on se repose et on repense aux bons vieux temps, quand on se battait contre les fascistes de DeFeline. »
 Un sourire nostalgique se dessine sur leurs visages.
+
+*[Leur poser d'autres questions] -> bistro_question
+*[...DeFeline ?] -> defeline
+
+= defeline
+Huguette repose son verre, le ton plus grave.  
+« DeFeline, c'était le chef de l'Ordre — l'ancien régime colonial.  
+Ils contrôlaient Gallia comme un port militaire, jusqu'à ce qu'on les chasse.  
+On pensait qu'une fois partis, tout irait mieux… »
+
+Karim renchérit :  
+Quand on a quitté le front, ils ont lancé ce programme COLLAPS… des avions civils, des tours radio.
+Ça semblait beau, mais c’était juste un autre moyen de contrôler les îles. L'influence du S.T.C a ironiquement permis d'endiguer les effets.
+
+Huguette sourit tristement :  
+« Heureusement qu'à l'époque, le Syndicat était fort.  
+On s'est battus pour que les îles gardent leur liberté. »  
+
+*[Leur poser d'autres questions] -> bistro_question
+
+= defeline
+Huguette repose son verre, le ton plus grave.  
+« DeFeline, c'était le chef de l'Ordre — l'ancien régime colonial.  
+Ils contrôlaient Gallia comme un port militaire, jusqu'à ce qu'on les chasse.  
+On pensait qu'une fois partis, tout irait mieux… »
+
+Karim renchérit :  
+« Ouais. Et puis Mobulu et son Parti pour la Nation ont pris le pouvoir.  
+Ils ont lancé le programme COLLAPS, ça avait l'air bien… mais c'était juste une autre façon de tout contrôler. »  
+
+Huguette sourit tristement :  
+« Heureusement qu'à l'époque, le Syndicat était fort.  
+On s'est battus pour que les îles gardent leur liberté. »  
 
 *[Leur poser d'autres questions] -> bistro_question
 
@@ -530,16 +563,19 @@ Un sourire nostalgique se dessine sur leurs visages.
 
 
 = proprio
-« Non, le propriétaire ne serait jamais parti d'ici, pas vraiment. Il tenait trop à son bistro. À vrai dire, il tenait beaucoup aux gens du coin. Il faisait le grognon, mais il y tenait. »
-
+« Non, le propriétaire ne serait jamais parti d'ici, pas vraiment. Il tenait trop à son bistro. 
+À vrai dire, il tenait beaucoup aux gens du coin. Il faisait le grognon, mais il y tenait.
 Il nous l'a dit lui-même quand on l'a croisé avec Karim, continue Huguette. « On est partis avec lui à la guerre contre les soldats de l'ancien ordre. Cette lutte, c'était important pour lui. »
-
 *[J'imagine qu'il est mort au combat.] -> mort
 *[Leur poser d'autres questions] -> bistro_question
 
 
 = mort
-« Oui, il est mort, comme beaucoup de nos camarades. On a décidé de reprendre son bistro — l'île coulait déjà — mais c'était trop dur de partir. Même sans habitants, ça nous tenait à cœur de revenir au Gamberge. Au final, on est jamais repartis, haha. On se la coule douce ici tant que l'eau ne nous a pas submergés. »
+« …il est tombé pendant la guerre de libération, quand on a chassé l’armée de DeFeline.
+comme beaucoup de nos camarades...
+On a décidé de reprendre son bistro, C’était juste après la guerre, pendant la grande inondation… quand tout le monde croyait que la paix durerait.
+Même sans habitants, ça nous tenait à cœur de revenir au Gamberge.
+Au final, on est jamais repartis, haha. On se la coule douce ici tant que l'eau ne nous a pas submergés. »
 
 *[Leur poser d'autres questions] -> bistro_question
 
@@ -547,7 +583,8 @@ Il nous l'a dit lui-même quand on l'a croisé avec Karim, continue Huguette. «
 = straightEdge
 Les deux esquissent un petit sourire espiègle et t'invitent à t'asseoir à côté d'eux. Huguette pose un verre devant la chaise vide. Tu commences à boire.
 
-« Tu sais, cet alcool est fabriqué par un de nos amis, Simon Levail. Il était dans notre escadron avant la guerre. Après, il a survécu et s'est installé ici ; depuis, il distille pour tout l'archipel. Même si on n'a pas participé, c'est devenu notre petite fierté. »
+« Tu sais, cet alcool est fabriqué par un de nos amis, Simon Levail. Il était dans notre escadron avant la guerre.
+Après la guerre, le Syndicat voulait tourner la page… Beaucoup comme Simon se sont recyclés dans la vie civile. »
 
 *[Reprendre un verre] -> straightEdge2
 *[Leur poser d'autres questions] -> bistro_question
