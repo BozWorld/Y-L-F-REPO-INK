@@ -463,7 +463,7 @@ tu finis par atterir sur un ilot, ou il est disposé quelque tables, et des chai
 proche d'un batiment qui prend la forme d'un bistro, tu reconnais une enseigne : LE GAMBERGE
 
 sur une table une femme et un homme discute une bouteille face a eue, tu remarques des élèments du syndicat, un peu partout.
-Un drapeau du syndicat qui flotte au gré du vent, sur une table grossièrement posé, tu peux voir une status du leader de la révolution. érigée après la guerre contre l'Ordre défeline.
+Un drapeau du syndicat qui flotte au gré du vent, sur une table grossièrement posé, tu peux voir une statue du leader de la révolution. érigée après la guerre contre l'Ordre défeline.
 une affichage de propagande du …propagande du Syndicat pendant la guerre contre l’Ordre Défeline est aussi exposé sur l'avant du bistro.
 
 *[Commencer à lui poser des questions] -> bistro_question
@@ -475,7 +475,7 @@ Pas sûr qu’il faille trop traîner ici…
 *[ une bouteille a cet heure?] -> bouteille
 * {knowledgeMBI == false} [...c'est une sorte de bistro ici ?] -> bistro_vide
 * {knowledgeMBI == true} [...pourquoi un bistro ici ? ] -> bistro_vide
-*[...je peux boirre avec vous?] -> straightEdge
+*[...je peux boire avec vous?] -> straightEdge
 * {knowledgeMBI == true} [vous bossez pour le syndicat ?] -> syndicat
 *[leurs rendre leurs colis] -> conclusion_bistro
 
@@ -550,8 +550,8 @@ On s'est battus pour que les îles gardent leur liberté. »
 
 = bistro_vide
 {knowledgeMB == false:
-    ... les deux habitant esquissent un grand sourire après vous avoir regardé de haut en bas. la femme parmit les deux prend la parole et dis
-    " ça n'as pas bien révisé son brief a ce que je vois hahaha c'est notre bistro...enfin ça l'est devenue on la récupéré."
+    ... les deux habitant esquissent un grand sourire après vous avoir regardé de haut en bas. la femme parmi les deux prend la parole et dis
+    " ça n'a pas bien révisé son brief a ce que je vois hahaha c'est notre bistro...enfin ça l'est devenue on la récupéré."
     -else:
         Karim et Huguette esquissent un sourire, mais paraissent un peu moins à l'aise.
 
@@ -612,7 +612,9 @@ Huguette te regarde avec tendresse, Karim écoute en silence. Huguette s'approch
 
 
 = calin
-« J'ai connu ça il y a quelques années, hahaha — c'est pas simple. Prends ton temps, gamine. Cette douleur ne disparaîtra pas avec le boulot. Tu peux visiter les plus belles îles de l'archipel, lunettes d'aviateur sur le nez, une mission qui te semble noble… mais tout ça peut cacher ta peine. Prends le temps de te soigner, de cicatriser. »
+« J'ai connu ça il y a quelques années, hahaha — c'est pas simple. Prends ton temps, gamine. Cette douleur ne disparaîtra pas avec le boulot. 
+Tu peux visiter les plus belles îles de l'archipel, lunettes d'aviateur sur le nez, une mission qui te semble noble… mais tout ça peut cacher ta peine.
+Prends le temps de te soigner, de cicatriser. »
 
 Meli ne peut empêcher un sanglot de s'échapper ; elle pleure en serrant Huguette. Après un long silence, tu quittes ses bras.
 
@@ -770,7 +772,7 @@ Le colis que tu viens m'apporter est justement un colis très important pour moi
 = verite
 
 "J'accepte de te dire la nature exacte de ce colis en échange d'un souvenir venant de toi.
-Quelque chose qui a du sens pour toi et que tu me dises pourquoi. En échange, je te dis la vérité sur ce colis que j'attends."
+Quelque chose qui a du sens pour toi et que tu me dises pourquoi. En échange, je te ditla vérité sur ce colis que j'attends."
 
 * [Lui donner un souvenir] -> souvenir
 * [Lui poser une autre question] -> disquaire_question
