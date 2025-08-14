@@ -134,6 +134,9 @@ les derniers vestiges d'une histoire qui s'efface."
 "Ici Meryl. Mission accomplie, Meli. Tu peux rentrer maintenant."
 
 * [Continuer] -> final_conclusion
+* [laissez un dernier message] -> last_message
+
+= last_message
 
 = final_silence
 Les pensées de Meli dérivent vers tous ces gens qu'elle a rencontrés...
@@ -165,7 +168,6 @@ Leurs histoires continueront de vivre, même quand l'eau aura tout recouvert.
     * {vieux_jean_visited == false} [Aller à la ferme du Vieux Jean]
         ~ vieux_jean_visited = true
         -> ferme
-
 ...
 * [ouvrir manuel] 
     -> manuel
@@ -316,16 +318,27 @@ Pas sûr qu’il faille trop traîner ici…
 = soudure
 
 {knowledgeMB == false:
-    ...Vous etes sur une ile de yveline les flots, elle a pas trop de non c'est le bosquet, elle étais autrefois rattaché a la ferme pas loin, celle de mon grand père le vieux jean maintenant elle est isolé on ne peut venir ici que en barque....ou avec le glorieux COLLAPS
+    ...Vous etes sur une ile de yveline les flots, elle a pas trop de nom...moi je l'ai renommé Zig-450-GOD KILLER
+    C'étais autrefois rattaché a la ferme pas loin, celle de mon grand père le vieux jean maintenant elle est isolé on ne peut venir ici que en barque....
+    (tu peux sentir de l'excitation dans ses yeux) ...ou en venant avec le glorieux COLLAPS
     -else:
     … Oui, c’est moi.  
-    Désolé·e, je suis un peu occupé·e… j’essaie de communiquer avec des aliens.
+    Désolé·e, j'étais occupé.e a communiquer avec les aliens…je crois ? en tout cas j'essaye de comprendre comment faire ?
 
 }
 
 *[Lui poser une autre question] -> question
 *[Comment ça, “aliens” ?] -> alien
+*[...Le glorieux COLLAPS ?] -> glorieux
 
+= glorieux
+
+(iel te regarde de haut en bas avec un air jugeur.euse) ...Toi tu déplace avec le COLLAPS-40.
+je connais mal toute l'histoire, mais les premier scientifique du syndicat ont été recruté pour travailler sur le programme COLLAPS.
+l'ancien ordre en avais besoin pour ces échanges économique ça a finit par se retourner contre eux.
+Le syndicat a vite compris comment utiliser les ondes particulières qui y'a sur toute la grande archipel. et crèere les tours radio. 
+
+*[Lui poser une autre question] -> question
 
 = alien
 Oui, des aliens… Je suis persuadé·e qu’il y en a un pas loin d’ici.  
@@ -340,21 +353,27 @@ Je le crois pas trop… mais les aliens, si. Alors j’essaie de leur parler.
 Non… pour l’instant, ils me rejettent.  
 Mais je travaille à devenir une machine pour mieux leur parler.  
 Je me dis qu’ils seraient plus ouverts si j’étais moi-même une machine.
+...je pense qu'ils sont trop timides c'est pour ça qu'ils refusent de discuter
 
 *[Lui poser une autre question] -> question
 
 
 = robot
-Malheureusement, je peux pas me transformer en robot… Ma mère s’inquiéterait trop.  
-En attendant, j’apprends tout ce que je peux sur les machines.
+
+...j'aimerai oui.
+Malheureusement, je peux pas me transformer en robot… Ma mère s’inquiéterait trop.
+moi je ne suis pas comme les vieux, les aliens, les machines et les pronoms ça me fait pas trop peur.
+fin si certaines machine peuvent faire peur mais bon je m'éloigne du sujet.
+Un jour j'ai promis a ma mère que je deviendrais un cyborg...elle l'a tellement mal pris.
+Qu'elle m'a envoyé ici pour des vacances en espérant que j'oublie ces histoires.
+Elle penserai que le coté anti syndicat de grand-père l'aiderai.
 
 *[Un robot genre… comme les COLLAPS ?] -> robot_2
 *[Lui poser une autre question] -> question
 
 
 = robot_2
-Oui… J’aimerais tellement construire une machine comme COLLAPS-30 ou 40…  
-Mais vivante.  
+Oui… J’aimerais tellement construire une machine comme COLLAPS-30 ou 40...Mais vivante.  
 Une machine intelligente, capable de voler seule à travers l’archipel.  
 Avec ça, je pourrais convaincre grand-père que le système radio est génial…  
 J’aimerais créer le COLLAPS-50.  
@@ -365,10 +384,10 @@ Sauf si, quand je rejoins le Syndicat, il existe déjà.
 
 = tank
 Non, les mines, c’était les anciens habitants paranoïaques…  
-Il y a longtemps, il y a eu une guerre ici.  
+Il y a longtemps, il y a eu une guerre ici... Je crois que le syndicat l'appelle "la guerre de libération"
 Enfin… j’en sais rien.  
 Mais j’aime bien ce tank. C’est une vieille construction du Syndicat, à l’époque où ils fabriquaient des armes.  
-Ils ont fini par arrêter.  
+Ils ont fini par arrêter.
 Maintenant, y’a ni mines, ni vraiment de monde… C’est pour ça que je viens ici.
 
 *[Mais t’as bidouillé ce tank ?!] -> tank_2
@@ -390,12 +409,14 @@ Et moi, j’aime bien les cabanes spéciales.
 Oui… plus ou moins.  
 Grand-père aime pas trop s’expliquer, alors il me demande pas d’explications.  
 Ce bosquet, avant, était relié directement à son île… c’est ce qu’il m’a dit.  
-Et il sait que je bidouille des trucs.
+Et il sait que je bidouille des trucs. Il trouve ça cool même.
+À vrai dire c'est surement le seul de la famille à trouver ça cool.
 
 *[Il s’inquiète pas ?] -> peur
 
 
 = peur
+
 Non. Grand-père sait que je risque rien.  
 Et il me fait confiance.  
 C’est la seule personne qui me fait confiance.  
@@ -412,12 +433,11 @@ Des fois on parle, des fois pas. Et c’est très bien comme ça.
 = robot_end
 Oui, papy l’accepte.  
 Il a peur du Syndicat et de la radio, il est persuadé que le système finira par se retourner contre nous.  
-Mais quand je lui ai dit que je voulais rejoindre le Syndicat pour créer une machine autonome, impossible à contrôler par eux, il a été rassuré.  
-Alors maintenant, j’essaie de devenir un androïde… pour savoir ensuite comment en construire un.
+Mais quand je lui ai dit que je voulais rejoindre le Syndicat pour créer une machine autonome, impossible à contrôler par eux, il a été rassuré.
+À vrai dire j'ai rien contre le syndicat.
+...mais si j'étais un robot je crois que je n'aimerai pas trop être dépendant d'un maître qui me forcerait à me détourner de mamission pour ses petits besoins.
 
 *[Lui poser une autre question] -> question
-
--> bosquet
 
 
 = conclusion
@@ -430,6 +450,7 @@ Même si mon grand-père a peur de vous, je te promets — pour te remercier de 
 
 Pas sûr que cette promesse te fasse que du bien…  
 Mais le gamin est tellement enthousiaste que c’en est contagieux.
+Tu décides de ne pas répondre, et tu décolles.
 ~ knowledgeB = true
 *[Retourner dans l’avion] -> vol
 
@@ -441,7 +462,9 @@ Mais le gamin est tellement enthousiaste que c’en est contagieux.
 tu finis par atterir sur un ilot, ou il est disposé quelque tables, et des chaisses proteger par une terasse.
 proche d'un batiment qui prend la forme d'un bistro, tu reconnais une enseigne : LE GAMBERGE
 
-sur une table une femme et un homme discute une bouteille face a eue, tu remarques des élèments du syndicat dans leurs dos.
+sur une table une femme et un homme discute une bouteille face a eue, tu remarques des élèments du syndicat, un peu partout.
+Un drapeau du syndicat qui flotte au gré du vent, sur une table grossièrement posé, tu peux voir une status du leader de la révolution.
+une affichage de propagande du syndicat du temps de la guerre est aussi exposé sur l'avant du bistro.
 
 *[Commencer à lui poser des questions] -> bistro_question
 
@@ -457,18 +480,22 @@ Pas sûr qu’il faille trop traîner ici…
 *[leurs rendre leurs colis] -> conclusion_bistro
 
 = bouteille
-« Oh, tu sais, quand t'as plus grand-chose à faire et une bonne amie avec toi, la boisson devient vite une option acceptable. Ici, y'a rien à faire — faut bien s'occuper, alors parfois on organise des apéros. » répond Karim.
+« Oh, tu sais, quand t'as plus grand-chose à faire et une bonne amie avec toi, la boisson devient vite une option acceptable. 
+Ici, y'a rien à faire — faut bien s'occuper, alors parfois on organise des apéros. » répond Karim.
 
-Huguette renchérit, un peu piquée : « Oh, la gamine, nous juge pas parce que t'as enfilé le costume ! Nous aussi on est passés par là — on regardait pas les gens de haut. »
+Huguette renchérit, un peu piquée : « Oh, la gamine, nous juge pas parce que t'as enfilé le costume ! 
+Nous aussi on est passés par là — on regardait pas les gens de haut. »
 
 *[La traiter de vieille folle] -> folle
+
 *[Leur poser d'autres questions] -> bistro_question
 
 
 = folle
 Karim éclate de rire. Huguette, après un petit sourire gêné, secoue son ami.
 
-« Hé ! Déjà qu'on manque de respect, t'as pas intérêt à te mettre de son côté ! Foutu pilote incapable de tenir un engin ! » dit-elle en le bousculant.
+« Hé ! Déjà qu'on manque de respect, t'as pas intérêt à te mettre de son côté !
+Foutu révisionniste incapable de tenir un engin ! » dit-elle en le bousculant.
 
 Karim se remet à rire aux éclats.
 
@@ -477,14 +504,16 @@ Karim se remet à rire aux éclats.
 
 
 = folle_2
-Il se retourne vers toi, tout fier. Huguette prend la parole.
+Il se retourne vers toi, tout fier, il pointe le drapeau. Huguette prend la parole.
 
-« Et ouais, gamine — figure-toi qu'on est d'anciens soldats du Syndicat, ouais ! On est partis quand on était jeunes. On a aidé à repousser l'armée de l'ancien régime. Sois sûr·e qu'ils ne viendront plus nous embêter ! Maintenant on se la coule douce, on se repose et on repense aux bons vieux temps, quand on se battait contre les fascistes. »
+« Et ouais, gamine — figure-toi qu'on est d'anciens soldats du Syndicat, ouais ! 
+On est partis quand on était jeunes. On a aidé à repousser l'armée de l'ancien régime. 
+Sois sûr·e qu'ils ne viendront plus nous embêter !
+Maintenant on se la coule douce, on se repose et on repense aux bons vieux temps, quand on se battait contre les fascistes de deFeline. »
 
 Un sourire nostalgique se dessine sur leurs visages.
 
 *[Leur poser d'autres questions] -> bistro_question
-
 
 = bistro_vide
 {knowledgeMB == false:
@@ -842,7 +871,7 @@ Je sais que personne ne me croit, mais je vous jure qu'un jour je prouverai l'ex
 
 = conclusion_ferme
 ~ visitedIsland +=1 
-~ knowledgeMF = true
+~ knowledgeF = true
 (Tu lui donnes le colis, il te remercie en abaissant son chapeau. Alors que tu pars, il te fait un signe de main. Tu remarques qu'une des vaches te regarde étrangement, mais tu as juste le temps de cligner des yeux qu'elle a déjà arrêté...)
 
 Merci gamine pour les engrais, repasse manger, je te ferai quelque chose qui n'a pas été contaminé par les ondes, un vrai repas ! 
