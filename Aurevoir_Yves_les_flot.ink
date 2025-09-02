@@ -464,7 +464,7 @@ proche d'un batiment qui prend la forme d'un bistro, tu reconnais une enseigne :
 
 sur une table une femme et un homme discute une bouteille face a eue, tu remarques des élèments du syndicat, un peu partout.
 Un drapeau du syndicat qui flotte au gré du vent, sur une table grossièrement posé, tu peux voir une statue du leader de la révolution. érigée après la guerre contre l'Ordre défeline.
-une affichage de propagande du …propagande du Syndicat pendant la guerre contre l’Ordre Défeline est aussi exposé sur l'avant du bistro.
+une affichage de propagande... du Syndicat pendant la guerre contre l’Ordre Défeline est aussi exposé sur l'avant du bistro.
 
 *[Commencer à lui poser des questions] -> bistro_question
 
@@ -810,9 +810,12 @@ Reviens me voir si jamais tu ne sais pas quoi faire de ta vie. Je te montrerai c
 
 === ferme ===
 
-(Tu arrives sur une île, avec un moulin, une petite ferme, et un enclos de vaches. Un vieil homme est assis sur une chaise devant la ferme, il te fixe avec méfiance)
+(Tu arrives sur une île, avec un moulin, une petite ferme, et un enclos de vaches. 
+Un vieil homme est assis sur une chaise devant la ferme, il te fixe avec méfiance)
 
-Oh, vous devez être un des chiens de garde du Syndicat ! Je vous fais pas confiance, restez bien à votre place et vous avez pas intérêt à toucher à mes vaches ! Oui m'sieur, ma p'tiote !
+Oh, vous devez être un des chiens de garde du Syndicat ! 
+Je vous fais pas confiance, restez bien à votre place et vous avez pas intérêt à toucher à mes vaches !
+Oui m'sieur... ma p'tiote !
 
 -> ferme_question
 
@@ -823,13 +826,49 @@ Pas sûr qu'il faille trop traîner ici…
 *[Lui dire qu'il a une belle ferme] -> belle_ferme
 *[Lui demander de quoi il se méfie] -> mefiance
 *{knowledgeB == false and knowledgeMB == true} [Lui demander où est Pet.ite Jean] -> jean
+*{knowledgeBI == true} [Lui demander si il connaissais l'ancien propriétaire du bistro] -> viel_ami
 *{knowledgeMF == false} [Lui demander comment vont ses vaches] -> vache
 *{knowledgeMF == true} [Lui demander s'il y a des aliens parmi ses vaches] -> vache
 *[Tiens ton colis] -> conclusion_ferme
 
+= viel_ami 
+( il a l'air d'etre surpris que tu poses cet question, il marque d'abord un temps d'arret puis commence ) 
+"Oui c'était un vieil ami à moi.
+A une époque on faisait les 400 coups ensemble ! 
+la vie étais vraiment dur a l'époque ou l'ordre DeFeline régnais
+on volait ! se battais contre des gangs rivaux ! on buvais ! on fumais ! on dansais !
+Quand le premier COLLAPS-10 nous as permit de communiquer avec les autres simplement c'étais une vrai révolution ! 
+ça a sortit pas mal de monde de la précarité ! on a profité de cet transformation de Yves les flots.
+Puis il a eue la guerre civile."
+( il cesse de parler, sa voix a commencé a ce casser a ce moment, mais surement que sa dignité la ratrapé. )
+"On a tout les 2 aidé les résistants au début. 
+On les aidaient quand il passé, on donné des fausses information au gouvernement.
+Mais il voulais plus, ils voulaient revivre notre jeunesse quand on faisait les 400 coups.
+il c'est enrolé dans le S.T.C et les résistants."
+*[ Comment leurs amitiés a finit ? ] -> fin_ami
+*[Lui poser une autre question] -> ferme_question
+
+= fin_ami
+( il ne bronche pas, cet question devais surement arriver, il reprend.)
+"Je ne l'ai jamais revu.
+il est une des nombreuses victime du PPN.
+la guerre civile la pris.
+On avais pas grand chose lui et moi. juste cet vie précaire ici.
+Il voulais jouer son rôle dans l'histoire, et moi je voulais rester en vie.
+On c'est dit aurevoir, embrasser une dernière fois et c'est mon dernier souvenir de lui."
+( le vieux jean sanglotte en silence, il c'est tourner pour plus que tu le vois)
+"J'ai refait ma vie, je me suis mariée a une femme et j'ai eu des enfants.
+mais je n'oublierai jamais cet amour.
+Quand je vois les 2 du bistro... je me rappelle de lui."
+*[Lui poser une autre question] -> ferme_question
+
 = belle_ferme
 
-T'as pas tort de le dire ! Elle a résisté à beaucoup de choses ma petite ferme ! Elle a résisté même quand la montée des eaux a commencé à arriver. Les différents habitants étaient persuadés que j'étais un illuminé de rester, ils disaient que je me laisserais submerger. Ma ferme a même servi à protéger des vaillants soldats de la résistance !
+d'abord méfiant suite a cet remarque, il finit par se détendre un peu.
+"T'as pas tort de le dire ! Elle a résisté à beaucoup de choses ma petite ferme !
+Elle a résisté même quand la montée des eaux a commencé à arriver.
+Les différents habitants étaient persuadés que j'étais un illuminé de rester, ils disaient que je me laisserais submerger.
+Ma ferme a même servi à protéger des vaillants soldats de la résistance !
 Ils se sont fait avoir par les ondes que vous diffusez partout qui provoquent la montée des eaux !
 
 *[La résistance ?] -> resistance 
@@ -838,47 +877,78 @@ Ils se sont fait avoir par les ondes que vous diffusez partout qui provoquent la
 = resistance
 (Il crache sur le sol et te regarde avec les sourcils froncés)
 
-Alors on vous apprend rien de l'histoire de notre île au syndicat ! Il y a quelques années de ça, quand le gouvernement de transition nous menait la vie trop dure, une petite bande de résistants s'est formée et menait la lutte depuis ici pour se débarrasser de l'autorité du gouvernement de transition. Ça a permis l'indépendance de l'archipel.
+"Alors on vous apprend rien de l'histoire de notre île au syndicat !
+Il y a quelques années de ça, quand Parti pour la nation le PPN nous menait la vie trop dure,
+une petite bande de résistants s'est formée et menait la lutte depuis ici pour se débarrasser du PPN.
+Ça a déclenché une guerre civile."
+( il marque un temps d'arret, il a l'air de se souvenir de choses)
+"Les résistants ont pris les reines du syndicat qui gérais le système COLLAPS.
+Il étais pret a tout pour faire tomber le PPN qui été soutenue par l'orde DeFeline ! 
+Mais cet guerre c'est enlissé, les révolutionnaire du syndicat devenais de plus en plus violent
+Constatant l'état de destruction de l'archipel ils établirent un partage du pouvoir.
+PPN gére la politique globale, et S.T.C gère le système COLLAPS, et les travailleurs qui l'entoure.
+le PPN vit a la capitale , et la gère, et impose sa politique ailleurs.
+et le syndicat régis l'organisation du travail sur toute l'archipel."
+( tu sens que son temps est devenue plus sérieux, il fixe le vide, son visage  a l'air peinée)
+"...Toute ces vies perdues, ces jeunes qui se sont battus pour un avenir meilleur...
+Malgré que j'ai aidée le syndicat, je ne leurs ferais jamais confiance ! 
+Ce sont qu'une bande de viellle elite qui ont exploité les pauvres gens comme moi!"
 
 *[Pourquoi vous avez aidé le syndicat ?] -> ennemis
 *[Lui poser une autre question] -> ferme_question
 
-=ennemis
+= ennemis
 
-Je déteste le syndicat, je suis persuadé qu'il cache des choses avec les ondes ! Mais l'ancien régime a fait bien plus de mal à la population de Yves-les-Flots. La résistance était composée majoritairement de petites gens venus des îles alentour ! Je pouvais pas collaborer avec ces pourris du gouvernement.
+Je déteste le syndicat, je suis persuadé qu'il cache des choses avec les ondes !
+Mais le PPN a fait bien plus de mal à la population de Yves-les-Flots.
+La résistance était composée majoritairement de petites gens venus des îles alentour !
+J'ai connue ces marmot avant qu'ils se prennent pour des révolutionnaires.
+Et j'ai vu tout le mal que le PPN aidé de l'orde DeFeline a fait.
+Je pouvais pas collaborer avec ces pourris du gouvernement.
 
 *[Lui poser une autre question] -> ferme_question
 
 = mefiance 
 
-De quoi je me méfie ? Des ondes ! Des tours ! De toutes ces machines qui nous parasitent le cerveau ! Et puis tous les jeunes s'enrôlent dans le syndicat en pensant faire quelque chose de grand, mais je sais qu'eux, ils sont prêts à collaborer avec les anciens pouvoirs. ILS NE SONT PAS DE CONFIANCE !
+De quoi je me méfie ? Des ondes !
+Des tours ! De toutes ces machines qui nous parasitent le cerveau !
+Puis tous les jeunes s'enrôlent dans le syndicat en pensant faire quelque chose de grand.
+Je sais qu'eux, ils sont prêts à collaborer avec les anciens pouvoirs. ILS NE SONT PAS DE CONFIANCE !
 
 *[Lui promettre de ne jamais négocier avec qui que ce soit] -> negociation
 *[Lui poser une autre question] -> ferme_question
 
 = negociation
 
-(Il esquisse un léger sourire)
+(Il esquisse un léger sourire, il n'est finalement pas dur à amadouer)
 
-Merci, gamine. Meli, c'est ça ton nom ? Fais gaffe au syndicat ! Je suis sûr que tu es une de ces jeunes avec plein de rêves patriotiques dans la tête, qui rêve d'un grand archipel interconnecté ! Avec plein d'ondes partout qui nous surveillent en permanence secrètement !
+...Merci, gamine hahaha
+Meli, c'est ça ton nom ? Fais gaffe au syndicat !
+Je suis sûr que tu es une de ces jeunes avec plein de rêves patriotiques dans la tête, qui rêve d'un grand archipel interconnecté ! 
+Avec plein d'ondes partout qui nous surveillent en permanence secrètement !
 
 *[Lui dire que vous n'êtes qu'un cœur brisé] -> amour
 *[Lui poser une autre question] -> ferme_question
 
-=amour
+= amour
 
-(Il a l'air toujours de se méfier)
+( son visage, se deserre encore plus, il esquisse une mou compatisante, avant de reprendre son ton dur)
 
-Les jeunes d'aujourd'hui s'enrôlent pour un tout et un rien ! Tu me rappelles la mère de Pet.ite Jean, elle était tellement charmée par les discours du sénile Boogie-Love qu'elle a décidé d'aller à la capitale travailler pour ces traîtres du syndicat ! 
-Aujourd'hui elle travaille pour l'ennemi ! Mais j'éduque le.a Pet.ite Jean à ne pas se faire avoir par ce genre de discours ! 
+Les jeunes d'aujourd'hui s'enrôlent pour un tout et un rien !
+Tu me rappelles la mère de Pet.ite Jean, 
+elle était tellement charmée par les discours du sénile Boogie-Love qu'elle a décidé d'aller à la capitale travailler pour ces traîtres du syndicat ! 
+Aujourd'hui elle travaille pour l'ennemi !
+Mais j'éduque le.a Pet.ite Jean à ne pas se faire avoir par ce genre de discours ! 
 
 *[Lui poser une autre question] -> ferme_question
 
 = jean
 
-(Il réfléchit 5 secondes) 
+(Il réfléchit quelque secondes) 
 
-Sûrement dans le bosquet pas loin. En général iel aime bien rester dans son coin, jouer avec ses engins, ces trucs. Le.a pet.ite est malin.e, très débrouillard.e. Iel est très renfermé.e, et n'aime pas beaucoup parler alors je le.a laisse tranquille.
+Sûrement dans le bosquet pas loin.
+En général iel aime bien rester dans son coin, jouer avec ses engins, ces trucs.
+Le.a pet.ite est malin.e, très débrouillard.e. Iel est très renfermé.e, et n'aime pas beaucoup parler alors je le.a laisse tranquille.
 Et en vérité je suis un peu comme lui, je le.a comprends bien, on a signé un contrat alors je sais pas trop où iel est.
 
 *[Un contrat ?] -> contrat
@@ -886,24 +956,35 @@ Et en vérité je suis un peu comme lui, je le.a comprends bien, on a signé un 
 
 = contrat 
 
-Je le laisse faire ce qu'iel veut tant qu'iel est ici, et je l'aide à avoir ce dont iel a besoin en terme de colis. Et iel vient me voir et un jour iel trouvera une solution pour que Yves-les-Flots redevienne une île comme elle l'était par le passé. 
-Même si je n'ai pas confiance en la radio et toutes ces choses, j'ai confiance en le.a pet.ite. Quoi qu'iel fasse, ça sera pour le bien de tous, j'en suis convaincu.
+Je le laisse faire ce qu'iel veut tant qu'iel est ici, et je l'aide à avoir ce dont iel a besoin en terme de colis.
+Et iel vient me voir et un jour iel trouvera une solution pour que Yves-les-Flots redevienne une île comme elle l'était par le passé. 
+Même si je n'ai pas confiance en la radio et toutes ces choses, j'ai confiance en le.a pet.ite.
+Quoi qu'iel fasse, ça sera pour le bien de tous, j'en suis convaincu.
 
 *[Lui poser une autre question] -> ferme_question
 
 = vache
 
 {knowledgeMF == false :
-    Vous ne me croirez jamais... mais il y a une de mes vaches qui est un alien. Je l'ai vue, un soir orageux, une de mes vaches était en train de parler avec un talkie-walkie. Avant que j'aie le temps de réaliser, je suis tombé dans les pommes. À mon réveil, plus aucune vache ne se comportait de manière étrange.
+    Vous ne me croirez jamais... mais il y a une de mes vaches qui est un alien. 
+    Je l'ai vue, un soir orageux, une de mes vaches était en train de parler avec un talkie-walkie. 
+    Avant que j'aie le temps de réaliser, je suis tombé dans les pommes. À mon réveil, plus aucune vache ne se comportait de manière étrange.
 - else:
-    J'ai toujours su que je finirais par rencontrer quelqu'un qui me croit ! Une de mes vaches est un alien ! Je l'ai vue, un soir orageux, une de mes vaches était en train de parler avec un talkie-walkie. Avant que j'aie le temps de réaliser, je suis tombé dans les pommes. À mon réveil, plus aucune vache ne se comportait de manière étrange.
+    J'ai toujours su que je finirais par rencontrer quelqu'un qui me croit !
+    Une de mes vaches est un alien ! 
+    Je l'ai vue, un soir orageux, une de mes vaches était en train de parler avec un talkie-walkie.
+    Avant que j'aie le temps de réaliser, je suis tombé dans les pommes.
+    À mon réveil, plus aucune vache ne se comportait de manière étrange.
 }
 *[Une vache qui parle ? Ça a l'air cool] -> cool 
 *[Lui poser une autre question] -> ferme_question
 
 = cool
 
-Je suis convaincu que cette vache communiquait avec des aliens. Des êtres venus d'ailleurs qui essayent d'apprendre le plus possible sur les habitants de Yves-les-Flots. Pet.ite Jean est aussi sûr.e que moi d'avoir vu ces aliens. Mais iel est persuadé.e qu'elle s'envolait dans une soucoupe volante.
+Je suis convaincu que cette vache communiquait avec des aliens.
+Des êtres venus d'ailleurs qui essayent d'apprendre le plus possible sur les habitants de Yves-les-Flots. 
+Pet.ite Jean est aussi sûr.e que moi d'avoir vu ces aliens.
+Mais iel est persuadé.e qu'elle s'envolait dans une soucoupe volante.
 
 Je sais que personne ne me croit, mais je vous jure qu'un jour je prouverai l'existence de ces vaches !
 *[Lui poser une autre question] -> ferme_question
@@ -911,7 +992,9 @@ Je sais que personne ne me croit, mais je vous jure qu'un jour je prouverai l'ex
 = conclusion_ferme
 ~ visitedIsland +=1 
 ~ knowledgeF = true
-(Tu lui donnes le colis, il te remercie en abaissant son chapeau. Alors que tu pars, il te fait un signe de main. Tu remarques qu'une des vaches te regarde étrangement, mais tu as juste le temps de cligner des yeux qu'elle a déjà arrêté...)
+(Tu lui donnes le colis, il te remercie en abaissant son chapeau.
+Alors que tu pars, il te fait un signe de main.
+Tu remarques qu'une des vaches te regarde étrangement, mais tu as juste le temps de cligner des yeux qu'elle a déjà arrêté...)
 
 Merci gamine pour les engrais, repasse manger, je te ferai quelque chose qui n'a pas été contaminé par les ondes, un vrai repas ! 
 
