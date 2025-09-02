@@ -137,7 +137,7 @@ les derniers vestiges d'une histoire qui s'efface."
 * [laissez un dernier message] -> last_message
 
 = last_message
-
+-> END
 = final_silence
 Les pensées de Meli dérivent vers tous ces gens qu'elle a rencontrés...
 Leurs histoires continueront de vivre, même quand l'eau aura tout recouvert.
@@ -810,202 +810,202 @@ Reviens me voir si jamais tu ne sais pas quoi faire de ta vie. Je te montrerai c
 
 === ferme ===
 
-(Tu arrives sur une île, avec un moulin, une petite ferme, et un enclos de vaches. 
-Un vieil homme est assis sur une chaise devant la ferme, il te fixe avec méfiance)
+(Tu arrives sur une île, avec un moulin, une petite ferme, et un enclos de vaches.  
+Un vieil homme est assis sur une chaise devant la ferme, il te fixe avec méfiance.)
 
-Oh, vous devez être un des chiens de garde du Syndicat ! 
-Je vous fais pas confiance, restez bien à votre place et vous avez pas intérêt à toucher à mes vaches !
-Oui m'sieur... ma p'tiote !
+Oh, vous devez être un des chiens de garde du Syndicat !  
+Je vous fais pas confiance, restez bien à votre place et vous avez pas intérêt à toucher à mes vaches !  
+Oui m’sieur… ma p’tiote !
 
 -> ferme_question
 
 = ferme_question
 Tu as des colis à livrer et des missions à remplir.  
-Pas sûr qu'il faille trop traîner ici…
+Pas sûr qu’il faille trop traîner ici…
 
-*[Lui dire qu'il a une belle ferme] -> belle_ferme
+*[Lui dire qu’il a une belle ferme] -> belle_ferme
 *[Lui demander de quoi il se méfie] -> mefiance
 *{knowledgeB == false and knowledgeMB == true} [Lui demander où est Pet.ite Jean] -> jean
-*{knowledgeBI == true} [Lui demander si il connaissais l'ancien propriétaire du bistro] -> viel_ami
+*{knowledgeBI == true} [Lui demander s’il connaissait l’ancien propriétaire du bistro] -> viel_ami
 *{knowledgeMF == false} [Lui demander comment vont ses vaches] -> vache
-*{knowledgeMF == true} [Lui demander s'il y a des aliens parmi ses vaches] -> vache
+*{knowledgeMF == true} [Lui demander s’il y a des aliens parmi ses vaches] -> vache
 *[Tiens ton colis] -> conclusion_ferme
 
-= viel_ami 
-( il a l'air d'etre surpris que tu poses cet question, il marque d'abord un temps d'arret puis commence ) 
-"Oui c'était un vieil ami à moi.
-A une époque on faisait les 400 coups ensemble ! 
-la vie étais vraiment dur a l'époque ou l'ordre DeFeline régnais
-on volait ! se battais contre des gangs rivaux ! on buvais ! on fumais ! on dansais !
-Quand le premier COLLAPS-10 nous as permit de communiquer avec les autres simplement c'étais une vrai révolution ! 
-ça a sortit pas mal de monde de la précarité ! on a profité de cet transformation de Yves les flots.
-Puis il a eue la guerre civile."
-( il cesse de parler, sa voix a commencé a ce casser a ce moment, mais surement que sa dignité la ratrapé. )
-"On a tout les 2 aidé les résistants au début. 
-On les aidaient quand il passé, on donné des fausses information au gouvernement.
-Mais il voulais plus, ils voulaient revivre notre jeunesse quand on faisait les 400 coups.
-il c'est enrolé dans le S.T.C et les résistants."
-*[ Comment leurs amitiés a finit ? ] -> fin_ami
+= viel_ami
+(Il a l’air surpris que tu poses cette question. Il marque un temps d’arrêt, puis commence :)  
+"Oui, c’était un vieil ami à moi.  
+À une époque, on faisait les 400 coups ensemble !  
+La vie était vraiment dure à l’époque où l’Ordre DeFeline régnait.  
+On volait, on se battait contre des gangs rivaux, on buvait, on fumait, on dansait !  
+Quand le premier COLLAPS-10 nous a permis de communiquer facilement avec les autres, c’était une vraie révolution !  
+Ça a sorti pas mal de monde de la précarité. On a profité de cette transformation de Yves-les-Flots.  
+Puis il y a eu la guerre civile."  
+(Il cesse de parler, sa voix commence à se casser, mais sa dignité le rattrape.)  
+"On a tous les deux aidé les résistants au début.  
+On les aidait quand ils passaient, on donnait de fausses informations au gouvernement.  
+Mais lui voulait plus, il voulait revivre notre jeunesse quand on faisait les 400 coups.  
+Il s’est enrôlé dans le S.T.C. et les résistants."  
+
+*[Comment votre amitié s’est-elle terminée ?] -> fin_ami  
 *[Lui poser une autre question] -> ferme_question
 
 = fin_ami
-( il ne bronche pas, cet question devais surement arriver, il reprend.)
-"Je ne l'ai jamais revu.
-il est une des nombreuses victime du PPN.
-la guerre civile la pris.
-On avais pas grand chose lui et moi. juste cet vie précaire ici.
-Il voulais jouer son rôle dans l'histoire, et moi je voulais rester en vie.
-On c'est dit aurevoir, embrasser une dernière fois et c'est mon dernier souvenir de lui."
-( le vieux jean sanglotte en silence, il c'est tourner pour plus que tu le vois)
-"J'ai refait ma vie, je me suis mariée a une femme et j'ai eu des enfants.
-mais je n'oublierai jamais cet amour.
-Quand je vois les 2 du bistro... je me rappelle de lui."
+(Il ne bronche pas. Cette question devait forcément arriver. Il reprend :)  
+"Je ne l’ai jamais revu.  
+Il est l’une des nombreuses victimes du PPN.  
+La guerre civile l’a pris.  
+On n’avait pas grand-chose, lui et moi… juste cette vie précaire ici.  
+Il voulait jouer son rôle dans l’Histoire, moi je voulais rester en vie.  
+On s’est dit adieu, on s’est embrassé une dernière fois, et c’est mon dernier souvenir de lui."  
+(Le vieux Jean sanglotte en silence, il se tourne pour que tu ne le voies pas.)  
+"J’ai refait ma vie, je me suis marié avec une femme et j’ai eu des enfants…  
+Mais je n’oublierai jamais cet amour.  
+Quand je vois les deux du bistro… je me rappelle de lui."  
+
 *[Lui poser une autre question] -> ferme_question
 
 = belle_ferme
+D’abord méfiant à ta remarque, il finit par se détendre un peu.  
+"T’as pas tort ! Elle a résisté à beaucoup de choses, ma petite ferme !  
+Même quand la montée des eaux a commencé.  
+Les habitants pensaient que j’étais un illuminé de rester, ils disaient que je me laisserais submerger.  
+Ma ferme a même servi à protéger des vaillants soldats de la résistance !  
+Ils se sont fait avoir par les ondes que vous diffusez partout et qui provoquent la montée des eaux !"  
 
-d'abord méfiant suite a cet remarque, il finit par se détendre un peu.
-"T'as pas tort de le dire ! Elle a résisté à beaucoup de choses ma petite ferme !
-Elle a résisté même quand la montée des eaux a commencé à arriver.
-Les différents habitants étaient persuadés que j'étais un illuminé de rester, ils disaient que je me laisserais submerger.
-Ma ferme a même servi à protéger des vaillants soldats de la résistance !
-Ils se sont fait avoir par les ondes que vous diffusez partout qui provoquent la montée des eaux !
-
-*[La résistance ?] -> resistance 
+*[La résistance ?] -> resistance  
 *[Lui poser une autre question] -> ferme_question
 
 = resistance
-(Il crache sur le sol et te regarde avec les sourcils froncés)
+(Il crache sur le sol et te regarde en fronçant les sourcils.)  
+"Alors on vous apprend rien sur l’histoire de notre île au Syndicat !  
+Il y a quelques années, quand le Parti pour la Nation (PPN) nous menait la vie trop dure,  
+une petite bande de résistants s’est formée et menait la lutte depuis ici pour se débarrasser du PPN.  
+Ça a déclenché une guerre civile."  
+(Il marque un temps d’arrêt, il semble se souvenir de choses.)  
+"Les résistants ont pris les rênes du Syndicat qui gérait le système COLLAPS.  
+Ils étaient prêts à tout pour faire tomber le PPN, soutenu par l’Ordre DeFeline !  
+Mais cette guerre s’est enlisée.  
+Les révolutionnaires du Syndicat sont devenus de plus en plus violents.  
+Constatant l’état de destruction de l’archipel, ils ont établi un partage du pouvoir :  
+PPN gère la politique globale, et le S.T.C. gère le système COLLAPS et les travailleurs autour.  
+Le PPN vit à la capitale, impose sa politique ailleurs,  
+et le Syndicat régit l’organisation du travail sur tout l’archipel."  
+(Tu sens que son ton devient plus grave. Il fixe le vide, son visage est marqué par la peine.)  
+"…Toutes ces vies perdues, ces jeunes qui se sont battus pour un avenir meilleur…  
+Malgré que j’aie aidé le Syndicat, je ne leur ferai jamais confiance !  
+Ce n’est qu’une bande de vieilles élites qui ont exploité les pauvres gens comme moi !"  
 
-"Alors on vous apprend rien de l'histoire de notre île au syndicat !
-Il y a quelques années de ça, quand Parti pour la nation le PPN nous menait la vie trop dure,
-une petite bande de résistants s'est formée et menait la lutte depuis ici pour se débarrasser du PPN.
-Ça a déclenché une guerre civile."
-( il marque un temps d'arret, il a l'air de se souvenir de choses)
-"Les résistants ont pris les reines du syndicat qui gérais le système COLLAPS.
-Il étais pret a tout pour faire tomber le PPN qui été soutenue par l'orde DeFeline ! 
-Mais cet guerre c'est enlissé, les révolutionnaire du syndicat devenais de plus en plus violent
-Constatant l'état de destruction de l'archipel ils établirent un partage du pouvoir.
-PPN gére la politique globale, et S.T.C gère le système COLLAPS, et les travailleurs qui l'entoure.
-le PPN vit a la capitale , et la gère, et impose sa politique ailleurs.
-et le syndicat régis l'organisation du travail sur toute l'archipel."
-( tu sens que son temps est devenue plus sérieux, il fixe le vide, son visage  a l'air peinée)
-"...Toute ces vies perdues, ces jeunes qui se sont battus pour un avenir meilleur...
-Malgré que j'ai aidée le syndicat, je ne leurs ferais jamais confiance ! 
-Ce sont qu'une bande de viellle elite qui ont exploité les pauvres gens comme moi!"
-
-*[Pourquoi vous avez aidé le syndicat ?] -> ennemis
+*[Pourquoi vous avez aidé le Syndicat ?] -> ennemis  
 *[Lui poser une autre question] -> ferme_question
 
 = ennemis
-
-Je déteste le syndicat, je suis persuadé qu'il cache des choses avec les ondes !
-Mais le PPN a fait bien plus de mal à la population de Yves-les-Flots.
-La résistance était composée majoritairement de petites gens venus des îles alentour !
-J'ai connue ces marmot avant qu'ils se prennent pour des révolutionnaires.
-Et j'ai vu tout le mal que le PPN aidé de l'orde DeFeline a fait.
-Je pouvais pas collaborer avec ces pourris du gouvernement.
+"Je déteste le Syndicat, je suis persuadé qu’il cache des choses avec ses ondes !  
+Mais le PPN a fait bien plus de mal à la population de Yves-les-Flots.  
+La résistance était composée surtout de petites gens venus des îles alentour !  
+J’ai connu ces marmots avant qu’ils se prennent pour des révolutionnaires.  
+Et j’ai vu tout le mal que le PPN, aidé de l’Ordre DeFeline, a fait.  
+Je pouvais pas collaborer avec ces pourris du gouvernement."  
 
 *[Lui poser une autre question] -> ferme_question
 
-= mefiance 
+= mefiance
+"De quoi je me méfie ? Des ondes !  
+Des tours ! De toutes ces machines qui nous parasitent le cerveau !  
+Et puis tous les jeunes s’enrôlent dans le Syndicat en pensant faire quelque chose de grand.  
+Je sais qu’eux, ils sont prêts à collaborer avec les anciens pouvoirs.  
+ILS NE SONT PAS DE CONFIANCE !"  
 
-De quoi je me méfie ? Des ondes !
-Des tours ! De toutes ces machines qui nous parasitent le cerveau !
-Puis tous les jeunes s'enrôlent dans le syndicat en pensant faire quelque chose de grand.
-Je sais qu'eux, ils sont prêts à collaborer avec les anciens pouvoirs. ILS NE SONT PAS DE CONFIANCE !
-
-*[Lui promettre de ne jamais négocier avec qui que ce soit] -> negociation
+*[Lui promettre de ne jamais négocier avec qui que ce soit] -> negociation  
 *[Lui poser une autre question] -> ferme_question
 
 = negociation
+(Il esquisse un léger sourire, finalement pas si dur à amadouer.)  
+"...Merci, gamine, hahaha.  
+Meli, c’est ça ton nom ? Fais gaffe au Syndicat !  
+Je suis sûr que t’es une de ces jeunes avec plein de rêves patriotiques dans la tête,  
+qui rêve d’un grand archipel interconnecté !  
+Avec plein d’ondes partout qui nous surveillent en permanence, hein !"  
 
-(Il esquisse un léger sourire, il n'est finalement pas dur à amadouer)
-
-...Merci, gamine hahaha
-Meli, c'est ça ton nom ? Fais gaffe au syndicat !
-Je suis sûr que tu es une de ces jeunes avec plein de rêves patriotiques dans la tête, qui rêve d'un grand archipel interconnecté ! 
-Avec plein d'ondes partout qui nous surveillent en permanence secrètement !
-
-*[Lui dire que vous n'êtes qu'un cœur brisé] -> amour
+*[Lui dire que vous n’êtes qu’un cœur brisé] -> amour  
 *[Lui poser une autre question] -> ferme_question
 
 = amour
-
-( son visage, se deserre encore plus, il esquisse une mou compatisante, avant de reprendre son ton dur)
-
-Les jeunes d'aujourd'hui s'enrôlent pour un tout et un rien !
-Tu me rappelles la mère de Pet.ite Jean, 
-elle était tellement charmée par les discours du sénile Boogie-Love qu'elle a décidé d'aller à la capitale travailler pour ces traîtres du syndicat ! 
-Aujourd'hui elle travaille pour l'ennemi !
-Mais j'éduque le.a Pet.ite Jean à ne pas se faire avoir par ce genre de discours ! 
+(Son visage se détend encore plus, il esquisse une moue compatissante avant de reprendre son ton dur.)  
+"Les jeunes d’aujourd’hui s’enrôlent pour un tout et un rien !  
+Tu me rappelles la mère de Pet.ite Jean.  
+Elle était tellement charmée par les discours du sénile Boogie-Love  
+qu’elle est allée travailler à la capitale pour ces traîtres du Syndicat !  
+Aujourd’hui, elle bosse pour l’ennemi !  
+Mais j’éduque le.a Pet.ite Jean à pas se faire avoir par ce genre de discours !"  
 
 *[Lui poser une autre question] -> ferme_question
 
 = jean
+(Il réfléchit quelques secondes.)  
+"Sûrement dans le bosquet pas loin.  
+En général, iel aime bien rester dans son coin, jouer avec ses engins, ses trucs.  
+Le.a petit.e est malin.e, très débrouillard.e. Iel est très renfermé.e, parle pas beaucoup, alors je le.a laisse tranquille.  
+Et puis en vérité, je suis un peu comme lui, je le.a comprends bien. On a signé un contrat, alors je sais pas trop où iel est."  
 
-(Il réfléchit quelque secondes) 
-
-Sûrement dans le bosquet pas loin.
-En général iel aime bien rester dans son coin, jouer avec ses engins, ces trucs.
-Le.a pet.ite est malin.e, très débrouillard.e. Iel est très renfermé.e, et n'aime pas beaucoup parler alors je le.a laisse tranquille.
-Et en vérité je suis un peu comme lui, je le.a comprends bien, on a signé un contrat alors je sais pas trop où iel est.
-
-*[Un contrat ?] -> contrat
+*[Un contrat ?] -> contrat  
 *[Lui poser une autre question] -> ferme_question
 
-= contrat 
-
-Je le laisse faire ce qu'iel veut tant qu'iel est ici, et je l'aide à avoir ce dont iel a besoin en terme de colis.
-Et iel vient me voir et un jour iel trouvera une solution pour que Yves-les-Flots redevienne une île comme elle l'était par le passé. 
-Même si je n'ai pas confiance en la radio et toutes ces choses, j'ai confiance en le.a pet.ite.
-Quoi qu'iel fasse, ça sera pour le bien de tous, j'en suis convaincu.
+= contrat
+"Je le laisse faire ce qu’iel veut tant qu’iel reste ici,  
+et je l’aide à avoir ce dont iel a besoin en termes de colis.  
+Et iel vient me voir. Un jour, iel trouvera une solution pour que Yves-les-Flots redevienne une île comme avant.  
+Même si j’ai pas confiance en la radio et toutes ces choses, j’ai confiance en le.a petit.e.  
+Quoi qu’iel fasse, ça sera pour le bien de tous, j’en suis convaincu."  
 
 *[Lui poser une autre question] -> ferme_question
 
 = vache
-
-{knowledgeMF == false :
-    Vous ne me croirez jamais... mais il y a une de mes vaches qui est un alien. 
-    Je l'ai vue, un soir orageux, une de mes vaches était en train de parler avec un talkie-walkie. 
-    Avant que j'aie le temps de réaliser, je suis tombé dans les pommes. À mon réveil, plus aucune vache ne se comportait de manière étrange.
+{knowledgeMF == false:
+    "Vous me croirez jamais... mais y a une de mes vaches qui est un alien.  
+    Je l’ai vue un soir orageux, en train de parler avec un talkie-walkie.  
+    Avant que j’aie le temps de réaliser, je suis tombé dans les pommes.  
+    À mon réveil, plus aucune vache se comportait bizarrement."
 - else:
-    J'ai toujours su que je finirais par rencontrer quelqu'un qui me croit !
-    Une de mes vaches est un alien ! 
-    Je l'ai vue, un soir orageux, une de mes vaches était en train de parler avec un talkie-walkie.
-    Avant que j'aie le temps de réaliser, je suis tombé dans les pommes.
-    À mon réveil, plus aucune vache ne se comportait de manière étrange.
+    "J’ai toujours su que je finirais par rencontrer quelqu’un qui me croit !  
+    Une de mes vaches est un alien !  
+    Je l’ai vue un soir orageux, en train de parler avec un talkie-walkie.  
+    Avant que j’aie le temps de réaliser, je suis tombé dans les pommes.  
+    À mon réveil, plus aucune vache se comportait bizarrement."
 }
-*[Une vache qui parle ? Ça a l'air cool] -> cool 
+*[Une vache qui parle ? Ça a l’air cool] -> cool  
 *[Lui poser une autre question] -> ferme_question
 
 = cool
+"Je suis convaincu que cette vache communiquait avec des aliens.  
+Des êtres venus d’ailleurs qui essayent d’en apprendre un max sur les habitants de Yves-les-Flots.  
+Pet.ite Jean est aussi sûr.e que moi d’avoir vu ces aliens.  
+Mais iel croit qu’elle s’envolait dans une soucoupe volante.  
 
-Je suis convaincu que cette vache communiquait avec des aliens.
-Des êtres venus d'ailleurs qui essayent d'apprendre le plus possible sur les habitants de Yves-les-Flots. 
-Pet.ite Jean est aussi sûr.e que moi d'avoir vu ces aliens.
-Mais iel est persuadé.e qu'elle s'envolait dans une soucoupe volante.
+Je sais que personne me croit, mais je vous jure qu’un jour je prouverai l’existence de ces vaches !"  
 
-Je sais que personne ne me croit, mais je vous jure qu'un jour je prouverai l'existence de ces vaches !
 *[Lui poser une autre question] -> ferme_question
 
 = conclusion_ferme
-~ visitedIsland +=1 
-~ knowledgeF = true
-(Tu lui donnes le colis, il te remercie en abaissant son chapeau.
-Alors que tu pars, il te fait un signe de main.
-Tu remarques qu'une des vaches te regarde étrangement, mais tu as juste le temps de cligner des yeux qu'elle a déjà arrêté...)
+~ visitedIsland +=1  
+~ knowledgeF = true  
+(Tu lui donnes le colis, il te remercie en abaissant son chapeau.  
+Alors que tu pars, il te fait un signe de main.  
+Tu remarques qu’une des vaches te regarde étrangement, mais tu as juste le temps de cligner des yeux qu’elle a déjà arrêté...)  
 
-Merci gamine pour les engrais, repasse manger, je te ferai quelque chose qui n'a pas été contaminé par les ondes, un vrai repas ! 
+"Merci gamine pour les engrais, repasse manger, je te ferai un vrai repas, pas contaminé par vos ondes !"  
 
-(Tu le remercies et tu t'en vas)
+(Tu le remercies et tu t’en vas.)  
 
-*[Retourner dans l'avion] -> vol
+*[Retourner dans l’avion] -> vol
+
 
 === interlude ===
 // Interlude - se déclenche après avoir visité deux îles
-"De retour au hangar principal, Meli prend un moment pour souffler. 
-La radio grésille doucement. Meryl veut surement prendre des nouvelles, savoir comment tu vas"
+"De retour au hangar principal, Meli prend un moment pour souffler.
+après avoir débarassé le matériel et le rangement.
+le couché de soleil commence a pointer son nez, sur une chaise en plastique tu contemps le couché et les iles a l'horizon
+La radio grésille doucement.
+Meryl veut surement prendre des nouvelles, savoir comment tu vas"
 
 * [Répondre à la radio] -> interlude_radio
 * [L'ignorer et continuer sa mission] -> interlude_refused
@@ -1014,7 +1014,6 @@ La radio grésille doucement. Meryl veut surement prendre des nouvelles, savoir 
 ~ interlude_finished = true
 
 "Meli fait le choix d'ignorer l'appel et continuer sa mission elle n'as pas la tete a ça" -> vol
--> vol
 
 = interlude_radio
 "Ici Meryl. Comment ça se passe, Meli ? Les habitants ne sont pas trop difficiles ?"
@@ -1028,14 +1027,31 @@ La radio grésille doucement. Meryl veut surement prendre des nouvelles, savoir 
 * [ conclure ] -> interlude_fin
 
 = syndic
-# elle reviens sur l'histoire du syndicat
+( meryl rigole, elle a l'air de se moquer de toi )
+Commetn tu as réusit a esquiver les formations obligatoire sur le syndicat ?
+bref...hmm par ou commencé. Le syndicat des travailleur de COLLAPS ou S.T.C
+fondé par Beryl et les ses camarades qui travaillais pour les usines gérant le COLLAPS
+Leurs invention et la popularité au seins des habitants interdépendant de ces travails et leurs création.
+On rendu le syndicat incontournable et puissant. ça a finit par culminer sur la guerre
+Et l'histoire c'est écrite...euh attend laisse moi relire mes notes...
+Le syndicat a été triomphant ! mais soucieux de la pax sur l'archipel
+Ils ont accepté de négocier avec le PPN ! et se partager le pouvoir.
+C'est presque comme on avais complétement gagner ! et maintenant on essaye de se consolider.
 
 * [posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
 
 = COLLAPS
-
-# elle reviens sur le programme COLLAPS
+( elle soupire, tu peux l'entendre chercher quelque chose, tu entend du papier froissé)
+le programme COLLAPSE est née il y a 40 ans quand le PPN a et Mobulu ont pris le pouvoir ! 
+Avant eue l'île étais Régis par l'ordre Defeline, une grande puissance étrangère.
+Elle gérais les ressources de l'île d'une main de fer, et exploitais les habitants.
+Elle est partit en ayant épuisé les ressources de l'archipel.
+Mobulu promis de moderniser l'archipel, Gallia, de recontruire l'économie de l'archipel.
+Mais c'est bien les travailleurs du S.T.C qui créerent ce que le système COLLAPS est aujourd'hui!
+Un programme technologique innovant ! ça nous as donnée les tour, cet radio ! 
+ET aussi la série des COLLAPS-40 la machine que tu utilises ! elle s'alimente et se recharge grâce au ondes! 
+Et elle peut naviguer partout dans l'archipel en localisant les tours et leurs signes radio! 
 * [posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
 
@@ -1054,50 +1070,105 @@ La radio grésille doucement. Meryl veut surement prendre des nouvelles, savoir 
 
 = craquage
 
-# ici elle reviens sur son craquage
+( Meli ravalle sa salive, elle se souviens qu'elle a bu )
+"...Disons que ils mon un peu envouté ce qui as ralentit un peu ma mission !
+Mais ils mon demandé comment je m'étais retrouvé la, et je leurs aies dit la vérité.
+Je leurs aies parlé de a rupture avec Melo.
+que c'étais pour ça que j'avais rejoins le syndicat.
+malgré leurs air de vieux aigri ils mon aidé.
+c'est vrai que c'est un peu ridicule de se confier a des inconnus comme ça...
+Mais je leurs remercie leurs mot mon beaucoup touché."
 
 * [reparlez des habitants ] -> les_habitants
 * [ posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
 
 = amour
-
+pet.ite jean est un peu renfermée sur soi-meme mais je lea comprend.
+j'etais pas vraiment du genre sociable non plus, j'étais obsédé par la musique.
+c'est comme ça que j'ai rencontré Melo d'ailleurs, maintenant que j'y penses...
+Bref Pet.ite jean étais tout mims ! et iel a l'air très malin! 
+Je suis sur qu'iel deviendra un.e grand.e scientifique du syndicat.
 # ici elle reviens sur ce que pet.ite jean la raconté elle parle de son enfance
 * [reparlez des habitants ] -> les_habitants
 * [ posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
 = boogie 
+( elle est soudainement excité a l'idée d'en parler ) 
+Son disquaire étais pleins de CD dans tout les sens, c'était un vrai bazar musical !
+Il a aussi un look de FOU je crois j'aimerai bien avoir ce look la moi aussi !
+Mais il a l'air de vivre une vie de fou en détour-...en écoutant ces vieux CD ! 
+Un chic types ! son carnets ma bien aidée d'ailleurs ! 
+j'aimerai bien le revoir et rediscuter avec lui un jour !
 
-# ici elle reviens sur son obsession pour boogielove
 * [reparlez des habitants ] -> les_habitants
 * [ posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
 = relation
 
-# elle raconte la relation entre les 2, la famille éloigné , comment la ville a changé
+( en repensant a l'histoire du vieux jean meli ressent un frissons)
+Le vieux jean, étais pas si méchant que ça.
+...Il est très hostile au Syndicat, mais c'est notre travail de le rassurer.
+Quand tu lui as un peu gratter sa coquille il deviens vite sympa.
+Il a l'air d'avoir beaucoup vécue aussi...
+c'est rare de rencontrer des gens qui ont vécues avant leurs guerres civiles.
+je crois avoir vu quelque chose aussi...non laisse tomber.
 * [reparlez des habitants ] -> les_habitants
 * [ posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
 
 = meryl_sermont
 
-# meryl lui fait la leçon 
+( tu réalises que ne pas lire du tout le manuel aide surement pas...)
 
-* [ mal de coeur ] -> coeur
-* [ nostalgie ] -> nostalgie 
+"Je me doutais quand on c'est parlais tout a l'heure que avais l'air dissipé !
+T'es trop tete en l'air ! tu devrais prendre cet tâches plus au sérieux !
+des vies en dépends ! et c'est la réputation du syndicat qui est en jeux !
+Au lieux de te prendre pour une animatrice radio, concentre-toi sur ta mission !"
+( meryl marque un temps d'arret, elle a l'air de flairer quelque chose )
+" Meli...ça fait longtemps on se connais.
+Je sais que tu vis une période difficile...si ça peut t'aider.
+On peut en discuter ensemble ?"
+
+* [ ...j'ai un mal de coeur...métaphorique ] -> coeur
+* [ je suis un peu mélancolique ] -> nostalgie 
 * [reparlez des habitants ] -> les_habitants
 * [ posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
 
 = coeur
 
-#test
+( une boule occupe occupe le coeur de Meli, elle se sent stupide )
+"...Je repense a Melo. ça fait déjà 4 ans mais je pense encore a elle.
+Je suis parti car la croiser et devoir l'ignorer me rendais triste.
+je peux meme pas me trouver de pretexte je suis la responsable de cet rupture...
+J'ai essayer a un moment de lui reparler, elle ne m'en veut pas mais je n'ai pas su quoi lui dire.
+J'étais plus aussi drole qu'avant..."
+( Meli marque un temps d'arret, elle fixe l'horizon , le couchée de soleil et reprend )
+"...Je me sens tellement stupide.
+J'ai été égoiste, et auto-centrée, je lui ai tout reproché.
+j'étais immature...des fois je me demande si je retomberai amoureuse.
+c'est comme si je m'étais déchiré le coeur toute seule.
+...je crois que ça ira, désolé pour le manque de concentration...
+mais cet mission m'aide beaucoup ! je veux aider mon prochain.
+c'est ma manière de continuer a aimer."
 * [ continuez a se faire sermonnez] -> meryl_sermont
 * [reparlez des habitants ] -> les_habitants
 * [ posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
+
 = nostalgie
 
+( Meli fixe l'horizon et le coucher de soleil, elle repense a tout ces voyages.)
+" devenir pilote pour le S.T.C ma amenée a quitté mon coin de l'archipel. 
+j'arrives toujours pas a croire que Yves les flots est la dernière mission avant que je rendent les gants.
+C'est un peu comme si je fermais un chapitre de ma vie."
+( elle repense soudainement aux habitants rencontré, les paysage, les sons de chaque lieu)
+"...J'oublierai jamais les gens que j'ai rencontrés...ET ça me rend nostalgique ! 
+Je pense que quand j'aurais un peu vécue une autre vie, peut-etre que je reprendrais les clées des moteur !
+le COLLAPS-40 et son moteur inssuportable vont me manquer.
+j'ai appris a aimer cet machine comme un vrai proche."
+( Meli esquisse un sourire et petit rire mélancolique)
 * [ continuez a se faire sermonnez] -> meryl_sermont
 * [reparlez des habitants ] -> les_habitants
 * [ posez d'autre question ] -> interlude_radio
