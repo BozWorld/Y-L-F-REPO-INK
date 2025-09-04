@@ -136,13 +136,14 @@ les derniers vestiges d'une histoire qui s'efface."
 * [Continuer] -> final_conclusion
 * [laissez un dernier message] -> last_message
 
-= last_message
--> END
 = final_silence
 Les pensées de Meli dérivent vers tous ces gens qu'elle a rencontrés...
 Leurs histoires continueront de vivre, même quand l'eau aura tout recouvert.
 
 * [Continuer] -> final_conclusion
+
+= last_message
+-> END
 
 = final_conclusion
 // À compléter avec le texte de fin définitif
@@ -178,11 +179,10 @@ Leurs histoires continueront de vivre, même quand l'eau aura tout recouvert.
 
 = page1
 
-Hello routeur du ciel !! Ce manuel est un manuel **spécial**, conçu par mes soins pour les besoins des habitants de l’île ! (Enfin... les 3 résidents officiels. Y a une quatrième page pour un presque-résident ? 👀)
+Hello routeur du ciel !! 
+Ce manuel est un manuel **spécial**, conçu par mes soins pour les besoins des habitants de l’île ! 
+(Enfin... les 3 résidents officiels. Y a une quatrième page pour un presque-résident ? 👀)
 
-Chaque page est dédiée à l’un·e d’entre eux, mais tu peux aussi regarder les **contrôles** du COLLAPS-40 si tu sais plus comment voler.
-
-* [Voir les contrôles] -> control
 * [Lire la description de Boogie-Love] -> boogie
 * [Lire la description de Pet.ite Jean] -> petite_jean
 * [Lire la description du Vieux Jean] -> vieux_jean
@@ -218,11 +218,13 @@ C’est tout pour les contrôles ! Bon vol et reste funky ✈️💿
 = boogie
 ~ knowledgeMF = true
 
-INFORMATION RÉSIDENT : Docteur Boogie-Love est un excentrique... c’est moi ! Hehehe. J’espère t’avoir surpris·e.
+INFORMATION RÉSIDENT : Docteur Boogie-Love est un excentrique... c’est moi ! 
+Hehehe. J’espère t’avoir surpris·e.
 Je suis fan de musique, et j’ai une histoire mystérieuse à raconter !
 
-INFORMATION LIEU : J’habite sur l’île la plus cool. Y a plein de disques et une enseigne géante en forme de disque (pas celle en forme de coquille Saint-Jacques — l’autre !).
-C’est là que je tiens mon disquaire "**CRAZY-LOVE**". Du feu de dieu !
+INFORMATION LIEU : J’habite sur l’île la plus cool.
+Y a plein de disques et une enseigne géante en forme de disque (pas celle en forme de coquille Saint-Jacques — l’autre !).
+C’est là que je tiens mon disquaire "**CRAZY-LOVE**". des sons comme tu en as jamais entendu !
 
 COLIS À LIVRER : Le colis scellé par le Syndicat, c’est pour moi. Apporte-le et je satisferai ta curiosité...
 
@@ -235,12 +237,17 @@ COLIS À LIVRER : Le colis scellé par le Syndicat, c’est pour moi. Apporte-le
 = petite_jean
 ~ knowledgeMB = true
 
-INFORMATION RÉSIDENT : Pet.ite Jean n’est pas résident·e permanent·e, mais iel vient souvent voir son grand-père (le Vieux Jean). 
-Introverti·e, bricoleur·euse, iel a du potentiel. Toujours en train de bidouiller des trucs !
+INFORMATION RÉSIDENT : Pet.ite Jean n’est pas résident·e permanent·e.
+Iel vient souvent voir son grand-père (le Vieux Jean). 
+Introverti·e, bricoleur·euse, iel a du potentiel.
+Toujours en train de bidouiller des trucs !
 
-INFORMATION LIEU : Un îlot entouré d’arbres et de matos technique. Pet.ite Jean y a installé sa cabane. Attention : avant, c’était une zone minée... mais iel est toujours vivant·e, donc ça devrait aller !
+INFORMATION LIEU : Un îlot entouré d’arbres et de matos technique...ah et un tank !
+Pet.ite Jean y a installé sa cabane.
+Attention : avant, c’était une zone minée... mais iel est toujours vivant·e, donc ça devrait aller pour toi !
 
-COLIS À LIVRER : (À NE PAS COMMUNIQUER AU SYNDICAT) C’est moi qui le commande pour iel. Y a du matos de soudure et d’électronique. Iel est malin·igne. Laisse-iel bricoler !
+COLIS À LIVRER : (À NE PAS COMMUNIQUER AU SYNDICAT) C’est moi qui le commande pour iel.
+Y a du matos de soudure et d’électronique. Iel est malin·igne. Laisse-iel bricoler !
 
 * [Lire la description de Boogie-Love] -> boogie
 * [Lire la description du Vieux Jean] -> vieux_jean
@@ -251,8 +258,10 @@ COLIS À LIVRER : (À NE PAS COMMUNIQUER AU SYNDICAT) C’est moi qui le command
 
 ~ knowledgeMF = true
 
-INFORMATION RÉSIDENT : Le plus old-school du coin. Il tient une ferme, râle tout le temps, mais il est pas méchant. C’est le grand-père de Pet.ite Jean. 
-Il parle à ses vaches... ouais. Faut le laisser tranquille.
+INFORMATION RÉSIDENT : Le plus old-school du coin.
+je respecte ce style aujourd'hui des vieux aigris on en voit plus beaucoup.
+Il tient une ferme, râle tout le temps, mais il est pas méchant. C’est le grand-père de Pet.ite Jean. 
+par rapport a ses vaches c'est un point sensible avec lui...tu verras! 
 
 INFORMATION LIEU : Une île classique : un champ, une ferme, du bétail, un moulin. Simple et rustique.
 
@@ -268,9 +277,14 @@ COLIS À LIVRER : Une lettre de sa fille et un peu d’engrais. Rien de bien fou
 
 ~ knowledgeMD = true
 
-INFORMATION RÉSIDENT : Deux anciens soldats. Ils vivaient ici avant l’inondation mais sont partis faire la guerre contre l’ancien régime. Revenus changés... et probablement bien éméchés 😅
+INFORMATION RÉSIDENT : Deux anciens soldats.
+Ils vivaient ici avant l’inondation mais sont partis faire la guerre contre l’ancien régime.
+Revenus changés... et probablement bien éméchés 😅
 
-INFORMATION LIEU : Le bistrot "**La Gamberge**". Impossible de le rater : y a des chaises et des tables dehors. Va boire un coup avec eux !
+INFORMATION LIEU : Le bistrot "**La Gamberge**". Impossible de le rater : 
+y a des chaises et des tables dehors...
+mais surtout des drapeaux du Syndicat partout! c'est gars c'est des convaincus!
+Va boire un coup avec eux !
 
 COLIS À LIVRER : Une lettre et une caisse d’alcool. Les classiques du réconfort.
 
@@ -532,22 +546,6 @@ On s'est battus pour que les îles gardent leur liberté. »
 
 *[Leur poser d'autres questions] -> bistro_question
 
-= defeline
-Huguette repose son verre, le ton plus grave.  
-« DeFeline, c'était le chef de l'Ordre — l'ancien régime colonial.  
-Ils contrôlaient Gallia comme un port militaire, jusqu'à ce qu'on les chasse.  
-On pensait qu'une fois partis, tout irait mieux… »
-
-Karim renchérit :  
-« Ouais. Et puis Mobulu et son Parti pour la Nation ont pris le pouvoir.  
-Ils ont lancé le programme COLLAPS, ça avait l'air bien… mais c'était juste une autre façon de tout contrôler. »  
-
-Huguette sourit tristement :  
-« Heureusement qu'à l'époque, le Syndicat était fort.  
-On s'est battus pour que les îles gardent leur liberté. »  
-
-*[Leur poser d'autres questions] -> bistro_question
-
 = bistro_vide
 {knowledgeMB == false:
     ... les deux habitant esquissent un grand sourire après vous avoir regardé de haut en bas. la femme parmi les deux prend la parole et dis
@@ -639,9 +637,13 @@ Tu leur rends le colis. Huguette le prend, te sourit.
 
 -> vol
 === disquaire ===
-(Tu finis par atterrir sur un îlot où se trouve un bâtiment avec une énorme enseigne en forme de disque où il est écrit "CRAZY LOVE PLACE")
-(Il y a plein de cartons devant la boutique. Depuis l'intérieur du bâtiment, on peut entendre une musique très forte. Un homme avec une étrange coupe et une dégaine particulière sort de la boutique avec un grand sourire)
-"BIENVENUE SUR L'UNIQUE ÎLE DU DOCTEUR BOOGIE LOVE!"
+(Tu finis par atterrir sur un îlot où se trouve un bâtiment avec une énorme enseigne en forme de disque.
+il est écrit "CRAZY LOVING PLACE")
+(Il y a plein de cartons devant la boutique.
+Depuis l'intérieur du bâtiment, on peut entendre une musique très forte.
+Un homme avec une étrange coupe et une dégaine particulière sort de la boutique avec un grand sourire
+prenant une pause excentrique, il te salue d'un grand geste de la main
+"BIENVENUE ROUTEUSE DES CIEUX !! BIENVENUE DANS MON ANTRE !!! J ESPERE QUE TU Y TROUVERAS L'AMOUR DU SON YO !!"
 
 -> disquaire_question
 
@@ -656,9 +658,75 @@ Pas sûr qu'il faille trop traîner ici…
 * [Vous en avez des cartons] -> carton
 * [Lui donner son colis] -> conclusion_disquaire
 
+= intro
+
+{knowledgeMD == false:
+    "Yes, YES, YES ! C'est moi, docteur CRAZY-LOVE !
+    Je suis un peu pris actuellement, j'essaie encore de nouvelles ondes !!!
+    j'apprécie que tu aies pris le temps de lire un peu mon manuel, YO !
+    Ça fait un bail qu'on n'a pas vu quelqu'un de ton genre par ici.
+    Faut dire qu'il reste pas grand monde de branché dans le coin !
+    MAIS CA MA LAISSÉ LE TEMPS DE BIEN BIDOUILLER LE COLLAPS-40 YO !"
+- else:
+    (Il se met à danser sur le rythme de la musique avant de la couper brutalement)
+    "Désolé, aviatrice ! J'étais encore en train d'essayer de nouvelles ondes !!
+    Mais j'apprécie ton bon goût.
+    Ça faisait longtemps qu'on n'avait pas vu un vrai membre du Syndicat venir ! 
+    La dernière fois qu'on a reçu du courrier, c'était en passant déposer Pet.ite Jean chez son grand-père.
+    Mais bon, ça m'a laissé le temps de bien préparer le COLLAPS-40 YO !"
+}
+
+
+* [Vous sabotez COLLAPS-40 ?!] -> docteur_robot
+* [Lui poser une autre question] -> disquaire_question
+
+
+= docteur_robot
+
+"Et oui, c'est moi, chère aviatrice !
+Je suis celui qui entretient COLLAPS-40.
+Bien que je ne sois pas son inventeur, j'ai beaucoup côtoyé son inventrice...hmmm émotion !
+J'entretiens aujourd'hui la radio et l'avion."
+(Il rigole un coup)
+"Elle m'a fait tomber amoureux du son et des ondes...on a vécue une belle histoire d'amour.
+Depuis, je ne les aies jamais quittés. Cette radio est ma meilleure amie ici."
+
+* [Merci pour le travail ?] -> neuf
+* [Lui poser une autre question] -> disquaire_question
+
+= neuf
+
+(Il esquisse un sourire mélancolique) 
+
+"Merci, ça me touche.
+Ça me tient à cœur, son inventrice y tenais beaucoup."
+(Il marque un temps d'arrêt, brisant le personnage.)
+Elle y tenait plus que tout, et on a travaillé ensemble pour le construire.
+Elle était l'ingénieure principale de la construction de cette machine. 
+Elle croyait plus que tout que ce projet permettrait un meilleur avenir à l'archipel.
+Elle s'imaginait un monde où les ondes seraient partout, et où quiconque pourrait transmettre ce qu'il veut grâce à l'aide des radios, rencontrer des gens d'ailleurs." (Il rigole) "Pet.ite Jean a toutes les chances de réaliser son rêve !"
+
+* [...J'imagine qu'elle n'est plus là ?] -> mort
+* [Lui poser une autre question] -> disquaire_question
+
+= mort 
+"Oui, elle est morte d'une grave maladie, et avec nos moyens de l'époque, nous n'avions pas de quoi la sauver.
+Le colis que tu viens me délivrer contient ses notes de carnet sur COLLAPS-30.
+Je les ai lues quand je bossais avec elle. Elle se nommait Elisabeth Van-Kerk.
+Ces notes sont restées longtemps cachées en attendant qu'une meilleure version (le programme COLLAPS-40) 
+soit réalisée, par peur d'espionnage du PPN le parti au pouvoir. 
+Bref, ton destrier est sa plus belle preuve de son empreinte sur le monde."
+
+* [Lui poser une autre question] -> disquaire_question
+
 = docteur
 
-"NON, PAS EXACTEMENT ! À vrai dire, je suis un fan de musique excentrique, hahaha. Je décortique les sons et les ondes pour découvrir ce qu'ils cachent, comment les soigner, les faire évoluer, les entretenir.
+"NON, PAS EXACTEMENT !"
+( il se met a tousser, surement que crier dans tout les sens trahit un peu son age avancé )
+À vrai dire, je suis un fan de musique excentrique, hahaha.
+Je décortique les sons et les ondes pour découvrir ce qu'ils cachent, comment les soigner, les entretenir.
+je m'occupe aussi de la tour radio de Yves les flots quand le S.T.C ne passe pas par là
+...SOIT LA MAJORITÉ DU TEMPS HAHAHA
 JE SUIS UN DOCTEUR DU SON, DE L'ONDE !"
 
 * [OH mais c'est vous le manuel !] -> revelation
@@ -666,7 +734,11 @@ JE SUIS UN DOCTEUR DU SON, DE L'ONDE !"
 
 = revelation
 
-"Hahaha, et oui ! Je le mets même régulièrement à jour, pour prendre les commandes pirates de Pet.ite Jean. J'entretiens aussi la tour du coin. La pirate passe le son le plus cool de la région.
+"Hahaha, et oui !
+Je le mets même régulièrement à jour, pour prendre les commandes pirates de Pet.ite Jean.
+J'entretiens aussi la tour du coin. 
+COMME UNE PIRATE DES TEMPS MODERNE... GENRE UN PIRATE DES ONDES TU COMPREND ?
+( il rigole un coups, puis se met a tousser, crier tout le temps ne lui réussit pas beaucoup )
 Le seul aussi !"
 
 * [Ça me paraît peu légal ce que vous faites] -> cops
@@ -674,8 +746,14 @@ Le seul aussi !"
 
 = cops
 
-"QUI POURRAIT M'ARRÊTER ? JE SUIS TOUT-PUISSANT EN CES TERRES ! L'île a été abandonnée par le Syndicat quand l'inondation a commencé. Ils ne pensaient pas que trois habitants lutteraient autant pour rester ici.
-Ils ont mis en place une mission de bénévolat périodique pour nous livrer des colis. Mais les lois ne s'appliquent plus vraiment ici. Ils n'ont pas d'intérêt à s'occuper d'une vieille radio usée, et tu n'as que faire de rapporter un vieux excentrique et un·e petit·e un peu étrange."
+"QUI POURRAIT M'ARRÊTER ? JE SUIS TOUT-PUISSANT EN CES TERRES !
+L'île a été abandonnée par le Syndicat et le gouvernement quand l'inondation a commencé.
+Ils ne pensaient pas que trois habitants lutteraient autant pour rester ici.
+C ETAIS SANS COMPTER L'AMOUR UNIQUE QUI LIE LES COEURS MORCELÉS DE YVES-LES-FLOTS.
+( il tousse encore un coups, mais cette fois il rigole )
+je devrais la noter celle la elle est pas mal hahaha.
+Ils ont mis en place une mission de bénévolat périodique pour nous livrer des colis.
+Mais les lois ne s'appliquent plus vraiment ici. Ils n'ont pas d'intérêt à s'occuper d'une vieille radio usée, et tu n'as que faire de rapporter un vieux excentrique et un·e petit·e un peu étrange."
 
 * [C'est pas faux, mais pourquoi vous faites ça ?] -> passion
 * [Lui poser une autre question] -> disquaire_question
@@ -690,81 +768,142 @@ Le·a gamin·e a du potentiel."
 
 * [Lui poser une autre question] -> disquaire_question
 
-= intro
-
-{knowledgeMD == false:
-    "Yes, YES, YES ! C'est moi, docteur CRAZY-LOVE ! Je suis un peu pris actuellement, j'essaie encore de nouvelles ondes, mais j'apprécie que tu aies pris le temps de lire un peu mon manuel, YO ! Ça fait un bail qu'on n'a pas vu quelqu'un de ton genre par ici. Faut dire qu'il reste pas grand monde de branché dans le coin !
-    Mais bon, ça m'a laissé le temps de bien préparer le COLLAPS-40."
-- else:
-    (Il se met à danser sur le rythme de la musique avant de la couper brutalement)
-
-    "Désolé, aviatrice ! J'étais encore en train d'essayer de nouvelles ondes. Mais j'apprécie ton bon goût. Ça faisait longtemps qu'on n'avait pas vu un vrai membre du Syndicat venir ! La dernière fois qu'on a reçu du courrier, c'était en passant déposer Pet.ite Jean chez son grand-père.
-
-    Mais bon, ça m'a laissé le temps de bien préparer le COLLAPS-40."
-}
-
-
-* [Vous entretenez COLLAPS-40 ?!] -> docteur_robot
-* [Lui poser une autre question] -> disquaire_question
-
-= docteur_robot
-
-"Et oui, c'est moi, chère aviatrice ! Je suis celui qui entretient COLLAPS-40. Bien que je ne sois pas son inventeur, j'ai beaucoup côtoyé son inventrice. J'entretiens aujourd'hui la radio et l'avion." (Il rigole un coup) "C'est ce qui m'a fait tomber amoureux du son et des ondes. Depuis, je ne les ai jamais quittés. Cette radio est ma meilleure amie ici."
-
-* [Merci pour le travail, il est flambant neuf !] -> neuf
-* [Lui poser une autre question] -> disquaire_question
-
-= neuf
-
-(Il esquisse un sourire mélancolique) 
-
-"Merci, ça me touche. Ça me tient à cœur, il a été construit par quelqu'un de proche." (Il marque un temps d'arrêt, brisant le personnage.) "Elle y tenait plus que tout, et on a travaillé ensemble pour le construire. Elle était l'ingénieure principale de la construction de cette machine. Elle croyait plus que tout que ce projet permettrait un meilleur avenir à l'archipel.
-Elle s'imaginait un monde où les ondes seraient partout, et où quiconque pourrait transmettre ce qu'il veut grâce à l'aide des radios, rencontrer des gens d'ailleurs." (Il rigole) "Pet.ite Jean a toutes les chances de réaliser son rêve !"
-
-* [...J'imagine qu'elle n'est plus là ?] -> mort
-* [Lui poser une autre question] -> disquaire_question
-
-= mort 
-"Oui, elle est morte d'une grave maladie, et avec nos moyens de l'époque, nous n'avions pas de quoi la sauver. Le colis que tu viens me délivrer contient ses notes de carnet sur COLLAPS-30.
-Je les ai lues quand je bossais avec elle. Elle se nommait Elisabeth Van-Kerk. Ces notes sont restées longtemps cachées en attendant qu'une meilleure version (la tienne) soit réalisée, par peur d'espionnage de l'ancien régime. 
-Bref, ton destrier est sa plus belle preuve de son empreinte sur le monde."
-
-* [Lui poser une autre question] -> disquaire_question
-
 = peur
 
 (Il rigole à pleine gorge avant de prendre une pause dramatique) 
 
-"Oh, tu sais, j'ai perdu bien plus dans ma recherche. C'est un risque que je prends avec plaisir. Si mes oreilles finissent usées, je l'accepterai.
-Le silence me terrorise, il m'horripile, et dans un coin comme celui-là, du silence, il y en a partout. Le bruit, le son est la seule chose qui me garde compagnie aujourd'hui."
+"OH ! SWEATHEART, JE SAIS QUE C'EST DANGEREUX !
+CET QUETE DU SON N'EST PAS SANS RISQUE ! MAIS JE LE PREND AVEC PLAISIR YO !
+SI TEL EST MON SORT QUE MES OREILLES SOIENT SACRIFIÉES SUR L'AUTEL DU SON, AINSI SOIT-IL !
+( il rigole de plus belle, Meli peut voir qu'il est sincère, mais plus tout jeune. )
+"Le silence me terrorise, il m'horripile, et dans un coin comme celui-là, du silence, il y en a partout.
+Le bruit, le son est la seule chose qui me garde compagnie aujourd'hui."
 
 * [Dit comme ça, c'est un peu triste] -> tristesse
 * [Lui poser une autre question] -> disquaire_question
 
 = tristesse
 
-(Il rigole de plus belle)
+(Il rigole de plus belle, cet fois il fait le choix de ne pas crier)
 
-"Bien sûr qu'il y a un peu de tristesse dans ça ! On est sur une petite île qui a été inondée par l'eau après avoir été ravagée par la guerre. Les bombardements, les tirs, les cris, les pleurs formaient périodiquement une triste mélodie, puis revenait le silence plombant. 
-Avant que le Syndicat trouve un arrangement avec le gouvernement, la terreur régnait sur l'archipel, ce qui a aussi donné lieu à de violents conflits."
+"Bien sûr qu'il y a un peu de tristesse dans ça ! 
+On est sur une petite île qui a été inondée par l'eau après avoir été ravagée par la guerre.
+Les bombardements, les tirs, les cris, les pleurs se rejoues dans le crâne de tout ce qu'ils ont entendu.
+puis revenait le silence plombant.
+( il réfléchis quelque seconde, et esquisse un sourir, puis regarde Meli avec un air sérieux )
+Mais dit moi gamine tu as le temps de t'intéresser a l'histoire de l'archipel ? 
+je parles pas de Yves les flot mais de Gallia en général en commençant par le PPN?
 
-* [L'ancien régime ?] -> regime
+
+
+
+* [ Avec plaisir !] -> histoire
 * [Lui poser une autre question] -> disquaire_question
 
-= regime
+= histoire
 
-"Gallia était un archipel dirigé par un gouvernement autoritaire, qui a fini par progressivement quitter les lieux suite à un violent conflit contre le Syndicat. Cela a abouti à ce qu'il organise les îles et les gère, mais accompagné d'un gouvernement de transition en attendant que le Syndicat trouve mieux.
-L'ancien régime appliquait toutes sortes de lois autoritaires afin de garder la population bien docile. Toute contestation populaire était fortement réprimée." (Il rigole) "Aucun des habitants de cette île ne pourrait vivre une vie aussi tranquille s'il était encore là.
-Aujourd'hui, je profite du fait que le Syndicat soit laxiste pour faire ce que je n'aurais jamais pu faire avant : jouer et vivre avec les sons et les ondes."
+"Gallia était un archipel colonial, dirigé par l'empire DeFeline localisé sur une autre océans que le notre.
+Ils finirent par quitter les lieux quand les ressources commencèrent à manquer.
+le PPN un parti qui avais été fondé au temps colonial, avais poussé a les faire partir a l'époque.
+ils ont pris le pouvoir après la guerre contre DeFeline.
+
+* [ la vie sous le PPN étais comment ?] -> PPN
+* [Lui poser une autre question] -> disquaire_question
+
+= PPN
+
+(boogie love marque un temps d'arrêt, il voit que meli est intéressée )
+Gallia était une archipel très pauvre après le départ de DeFeline.
+Le PPN promis de moderniser l'archipel tout entière, la rendre autonome.
+Ils mirent en place le programme COLLAPS, qui permis de relier les îles entre elles.
+Le PPN appliquait toutes sortes de lois autoritaires afin de garder la population bien docile.
+Toute contestation populaire était fortement réprimée."
+(Il rigole)
+"Sous le PPN, ou encore moins le régime DeFeline, un endroit comme Yves-les-Flots n'aurait jamais pu exister.
+
+* [ et c'est la ou le syndicat joue son rôle ?] -> syndicat
+* [Lui poser une autre question] -> disquaire_question
+
+= syndicat 
+
+"Excatement tu comprend vite.
+Le syndicat est née du contexte de l'industrialisation de l'archipel.
+Des ouvriers, des ingénieurs, des scientifiques qui rêvaient d'une organisation meilleures.
+A vrai dire le syndicat c'est constituer spontannément par la désorganisation du PPN.
+et les avancées croissante qu'avais permit le programme COLLAPS.
+
+* [ j'imagine que c'est la que ça c'est gâté ?] -> tension
+* [Lui poser une autre question] -> disquaire_question
+
+= tension
+
+...Tout n'étais que tension entre le PPN et le syndicat.
+Le syndicat a toujours été en opposition avec le PPN, et a toujours lutté contre lui.
+ça c'est gaté quand le PPN a commencé a retravaillez avec l'ordre DeFeline.
+Le programme COLLAPS intéréssé l'ordre DeFeline, et les ressources qui permettais de les créer.
+* [COLLAPS a changé l'archipel !] -> COLLAPS
+* [Lui poser une autre question] -> disquaire_question
+
+= COLLAPS
+( Meli ne sais pas tout de l'histoire de l'archipel, mais elle est traversé par le mythe du COLLAPS )
+"c'est vrai, COLLAPS a changé l'archipel.
+Les iles ont évolués, et le programme COLLAPS est devenue avec le symbole de l'archipel.
+Le programme COLLAPS avais permit de sortir l'archipel entière de la misère.
+appaisé les tensions ethnique entre les différentes îles.
+crée une interdépendance économique entre les îles.
+le partage et la redistributions des ressources étais capitale a la survie de l'archipel.
+le syndicat a travaillé a sa base a ça, le programme COLLAPS c'etais leurs fierté.
+* [Mais ça n'a pas duré] -> guerre
+* [Lui poser une autre question] -> disquaire_question
+
+= guerre
+
+( Boogie Love, marque un temps d'arrêt, il été happé par ses souvenirs )
+"Oui, la guerre civile éclata.
+Le PPN aidé de l'ordre DeFeline, lança une violente répression contre l'ensemble de l'archipel.
+le syndicat fut déclaré organisation terroriste.
+le moment charnière fut quand le PPN fit exploser un COLLAPS-30 en plein vol, tuant tout les passagers a bord.
+Le syndicat se rapprocha des résistants naissant, le PPC le parti pour COLLAPS.
+
+* [et la le conflit se globalise.] -> PPC
+
+= PPC
+
+( Boogie-love est surpris, il réalise que Meli en sait plus qu'il l'imaginais sur l'archipel )
+Oui le PPC étais un parti née du moment révolutionnaire.
+il rassemblait des ouvriers, des paysans, des anciens du syndicat.
+Le PPC avais pour but de renverser le PPN et l'ordre DeFeline.
+Après des années de guerre intense, le conflit s'enlissais...
+La violence finit par s'exporter a Marinette la capitale de DeFeline.
+des violences émeutes, grèves, sabotages, assassinats secoué tout l'empire.
+DeFeline décida de se retirer de Gallia, laissant le PPN seul au pouvoir.
+
+* [et c'est la que le syndicat a gagné ?] -> victoire
+
+= victoire
+
+( Boogie-Love sourit, il voit que le récit officiel est bien connue.    )
+le PPN fut forcé de négocier avec le syndicat.
+en échange d'un partage : il garde la Capitale, ou se trouve la majorité des ressources.
+et le syndicat le reste de l'archipel, le controle des tours radio, et le programme COLLAPS.
+Pour l'organisation politique, le PPN garde le pouvoir, mais le syndicat a une grande influence.
+le PPC est la face démocratique du syndicat.
+le S.T.C le syndicat des travailleur COLLAPS est l'organe "militaire".
+Aujourd'hui le syndicat est l'organisation la plus puissante de l'archipel.
+C'est grâce a eux que tu peux voler dans les airs de Gallia.
+et que nous pouvons toujours vivre ici a Yves-les-Flots."
 
 * [Lui poser une autre question] -> disquaire_question
 
 = carton
 (Boogie Love esquisse un sourire de fierté) 
 
-"Tous ces cartons sont principalement mes vinyles. Mais il y a aussi beaucoup de babioles. Tu sais, le magasin n'est pas bien grand et il n'y a pas grand endroit où stocker tout ça, hahaha.
-J'ai eu l'occasion de beaucoup voyager autour de l'archipel avec les ingénieurs du Syndicat. Je trouvais ça important de profiter de cette chance pour garder un souvenir du maximum de gens que je rencontrais et des bizarreries que je trouvais.
-Le colis que tu viens m'apporter est justement un colis très important pour moi, hahaha."
+" TOUT CES CARTONS SONT MA VIE, MES SOUVENIR, MES ORGANES YO ! JE CONSERVE TOUT ÇA COMME UN TRÉSOR !
+DANS MA JEUNESSE J"AI VOYAGÉ AUTOUR DE L"ARCHIPEL, RÉCUPURANT VINYL ET OBJETS BIZARRES PARTOUT OÙ JE PASSAIS.
+CE MAGASIN SERA JAMAIS ASSEZ GRAND POUR CONTENIR SE TRÉSOR !
+( il rigole a pleine gorge )
+J'ai eu l'occasion de beaucoup voyager autour de l'archipel avec les ingénieurs du Syndicat.
+Le colis que tu viens m'apporter est justement un colis très important pour moi."
 
 * [...Je peux savoir ce qu'il contient ?] -> verite 
 * [Lui poser une autre question] -> disquaire_question
@@ -772,7 +911,8 @@ Le colis que tu viens m'apporter est justement un colis très important pour moi
 = verite
 
 "J'accepte de te dire la nature exacte de ce colis en échange d'un souvenir venant de toi.
-Quelque chose qui a du sens pour toi et que tu me dises pourquoi. En échange, je te ditla vérité sur ce colis que j'attends."
+Quelque chose qui a du sens pour toi et que tu me dises pourquoi.
+En échange, je te dit la vérité sur ce colis que j'attends."
 
 * [Lui donner un souvenir] -> souvenir
 * [Lui poser une autre question] -> disquaire_question
@@ -781,19 +921,32 @@ Quelque chose qui a du sens pour toi et que tu me dises pourquoi. En échange, j
 
 (Après une courte hésitation, Meli sort avec confiance un CD de l'avion)
 
-"...Ajoutez ça à votre collection musicale. C'est une compilation de musiques que j'aime beaucoup que j'avais faite il y a longtemps pour... une amie, mais je n'en ai plus besoin aujourd'hui... L'avoir toujours avec moi, je crois que ça me fait un peu souffrir.
+"...Ajoutez ça à votre collection musicale.
+C'est une compilation de musiques que j'aime beaucoup que j'avais faite il y a longtemps pour... une amie, mais je n'en ai plus besoin aujourd'hui...
+L'avoir toujours avec moi, je crois que ça me fait un peu souffrir.
+Et je veux passer autre chose, je pense que avec vous il sera en sécurité.
 Alors je préfère que ce soit vous qui l'ayez. J'espère que ça vous plaira."
 
-* [Écouter son histoire] -> histoire
+* [Écouter son histoire] -> aurevoir
 * [Lui poser une autre question] -> disquaire_question
 
-= histoire
+= aurevoir
 
 (Boogie Love accepte le cadeau, s'éclaircit la voix et prend un ton mélancolique)
 
-"C'est le carnet de ma femme, Eleone von Kerk, l'inventrice du protocole COLLAPS. Celui qui a permis de donner plus d'indépendance au Syndicat, un protocole simple permettant la communication entre les îles.
-Elle est morte pendant une violente répression de la part du gouvernement de transition. Bref, une longue histoire, mais surtout la femme de ma vie. Ce carnet contient ses notes. Ils avaient été conservés par le Syndicat comme secret d'État, elle me les avait légués.
-Elle ne m'avait jamais offert de souvenir. Elle voulait que si elle partait la première, je récupère ce journal."
+"C'est le carnet de ma femme, Eleone von Kerk, l'inventrice du protocole COLLAPS.
+Celui qui a permis de donner plus d'indépendance au Syndicat, un protocole simple permettant la communication entre les îles.
+Elle est morte pendant une violente répression de la part du PPN.
+Elle étais la femme de ma vie. Ce carnet contient ses notes. 
+Ils avaient été conservés par le Syndicat comme secret d'État, elle me les avait légués.
+Elle ne m'avait jamais offert de souvenir.
+Elle voulait que si elle partait la première, je récupère ce journal.
+le carnet étais resté au syndicat longtemps, par peur d'espionnage du PPN.
+Ils ont fait le choix de me le rendre aujourd'hui, après tout ce temps.
+A vrai dire...Je l'avais déjà lu, elle me le faisais lire quand on travaillais ensemble.
+Le relire....c'est un peu comme si elle étais encore là.
+ça sera le plus beau souvenir que je n'aurais jamais conservé d'elle."
+( il rigole un coups, cet fois le personnage a craqué, il est sincère, mais pas triste.)
 
 * [Lui poser une autre question] -> disquaire_question
 
@@ -803,7 +956,9 @@ Elle ne m'avait jamais offert de souvenir. Elle voulait que si elle partait la p
 (Tu lui remets son colis) 
 
 "Meli, c'est ton nom, c'est ça ?
-Reviens me voir si jamais tu ne sais pas quoi faire de ta vie. Je te montrerai comment utiliser les radios. Je suis persuadé que ça pourrait te plaire."
+Reviens me voir si jamais tu ne sais pas quoi faire de ta vie.
+Je te montrerai comment utiliser les radios.
+Je suis persuadé que ça pourrait te plaire."
 
 (Tu le remercies et retournes à ton avion)
 * [Retourner dans l'avion] -> vol
@@ -1010,12 +1165,9 @@ Meryl veut surement prendre des nouvelles, savoir comment tu vas"
 * [Répondre à la radio] -> interlude_radio
 * [L'ignorer et continuer sa mission] -> interlude_refused
 
-= interlude_refused
-~ interlude_finished = true
-
-"Meli fait le choix d'ignorer l'appel et continuer sa mission elle n'as pas la tete a ça" -> vol
 
 = interlude_radio
+
 "Ici Meryl. Comment ça se passe, Meli ? Les habitants ne sont pas trop difficiles ?"
 
 * ["non ils sont géniaux pour l'instant"] -> les_habitants
@@ -1026,7 +1178,14 @@ Meryl veut surement prendre des nouvelles, savoir comment tu vas"
 }
 * [ conclure ] -> interlude_fin
 
+= interlude_refused
+
+~ interlude_finished = true
+
+"Meli fait le choix d'ignorer l'appel et continuer sa mission elle n'as pas la tete a ça" -> vol
+
 = syndic
+
 ( meryl rigole, elle a l'air de se moquer de toi )
 Commetn tu as réusit a esquiver les formations obligatoire sur le syndicat ?
 bref...hmm par ou commencé. Le syndicat des travailleur de COLLAPS ou S.T.C
@@ -1042,6 +1201,7 @@ C'est presque comme on avais complétement gagner ! et maintenant on essaye de s
 * [ il est temps de partir ] -> interlude_fin
 
 = COLLAPS
+
 ( elle soupire, tu peux l'entendre chercher quelque chose, tu entend du papier froissé)
 le programme COLLAPSE est née il y a 40 ans quand le PPN a et Mobulu ont pris le pouvoir ! 
 Avant eue l'île étais Régis par l'ordre Defeline, une grande puissance étrangère.
@@ -1052,11 +1212,14 @@ Mais c'est bien les travailleurs du S.T.C qui créerent ce que le système COLLA
 Un programme technologique innovant ! ça nous as donnée les tour, cet radio ! 
 ET aussi la série des COLLAPS-40 la machine que tu utilises ! elle s'alimente et se recharge grâce au ondes! 
 Et elle peut naviguer partout dans l'archipel en localisant les tours et leurs signes radio! 
+
 * [posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
 
 = les_habitants
+
 "ceux que j'ai rencontrée ont eue beaucoup de chose a me raconter, a vrai dire...je crois que je m'attache a eux...et c'est surement réciproque car je suis tout bonnement génial.
+
 {knowledgeBI == true} ...j'avoue j'ai un peu craqué en parlant a huguette et karim ce n'est pas très profesionnelle de ma part, mais il savent mettre en confiance... au final la rupture est plus sensible que je l'imaginais.
 {knowledgeB == true } ...j'aime bien peti.te jean, je comprend pas tout ce qu'iel raconte mais je l'ai trouvé très agréable, fait un peu peur avec ces histoire de nous remplacer mais bon il faut toujours croire en l'avenir.
 {knowledgeD == true} ... Boogie-love est tout bonnement mon idole, si cet archipel étais pas tout bonnement entrain de couler, je pense que je viendrais l'aider a géré et etendre la porté de sa radio pira-....hm l'aidez a tenir son disquaire plutot
@@ -1084,16 +1247,20 @@ Mais je leurs remercie leurs mot mon beaucoup touché."
 * [ il est temps de partir ] -> interlude_fin
 
 = amour
+
 pet.ite jean est un peu renfermée sur soi-meme mais je lea comprend.
 j'etais pas vraiment du genre sociable non plus, j'étais obsédé par la musique.
 c'est comme ça que j'ai rencontré Melo d'ailleurs, maintenant que j'y penses...
 Bref Pet.ite jean étais tout mims ! et iel a l'air très malin! 
 Je suis sur qu'iel deviendra un.e grand.e scientifique du syndicat.
 # ici elle reviens sur ce que pet.ite jean la raconté elle parle de son enfance
+
 * [reparlez des habitants ] -> les_habitants
 * [ posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
-= boogie 
+
+= boogie
+
 ( elle est soudainement excité a l'idée d'en parler ) 
 Son disquaire étais pleins de CD dans tout les sens, c'était un vrai bazar musical !
 Il a aussi un look de FOU je crois j'aimerai bien avoir ce look la moi aussi !
@@ -1104,6 +1271,7 @@ j'aimerai bien le revoir et rediscuter avec lui un jour !
 * [reparlez des habitants ] -> les_habitants
 * [ posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
+
 = relation
 
 ( en repensant a l'histoire du vieux jean meli ressent un frissons)
@@ -1152,7 +1320,7 @@ c'est comme si je m'étais déchiré le coeur toute seule.
 ...je crois que ça ira, désolé pour le manque de concentration...
 mais cet mission m'aide beaucoup ! je veux aider mon prochain.
 c'est ma manière de continuer a aimer."
-* [ continuez a se faire sermonnez] -> meryl_sermont
+( Meli esquisse un sourire triste )
 * [reparlez des habitants ] -> les_habitants
 * [ posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
@@ -1169,20 +1337,13 @@ Je pense que quand j'aurais un peu vécue une autre vie, peut-etre que je repren
 le COLLAPS-40 et son moteur inssuportable vont me manquer.
 j'ai appris a aimer cet machine comme un vrai proche."
 ( Meli esquisse un sourire et petit rire mélancolique)
-* [ continuez a se faire sermonnez] -> meryl_sermont
 * [reparlez des habitants ] -> les_habitants
 * [ posez d'autre question ] -> interlude_radio
 * [ il est temps de partir ] -> interlude_fin
 
-= mission
-* [reparlez des habitants ] -> les_habitants
-* [ posez d'autre question ] -> interlude_radio
-* [ il est temps de partir ] -> interlude_fin
-
-= ending 
-#test 
 
 = interlude_fin
+
 "Fais attention à toi. Ces gens ont leurs histoires, leurs blessures... 
 Rappelle-toi qu'on est juste là pour livrer des colis, pas pour s'immiscer dans leurs affaires."
 
@@ -1193,5 +1354,6 @@ Rappelle-toi qu'on est juste là pour livrer des colis, pas pour s'immiscer dans
 
 
 === final_ending ===
+
 #test
 -> END
