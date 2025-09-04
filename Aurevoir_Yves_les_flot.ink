@@ -116,7 +116,8 @@ Fin de communication."
 -> interlude
 
 === retour_final ===
-"C’était la dernière livraison. Il est temps de rentrer... une dernière fois."
+"C’était la dernière livraison. Il est temps de rentrer... une dernière fois.
+le ciel est particulièrement silencieux, on n'entend que le bruit des vagues."
 -> final
 
 === final ===
@@ -131,24 +132,57 @@ les derniers vestiges d'une histoire qui s'efface."
 * [Rester silencieuse] -> final_silence
 
 = final_radio
-"Ici Meryl. Mission accomplie, Meli. Tu peux rentrer maintenant."
+"Ici Meryl. Mission accomplie, Meli.
+Tu peux rentrer maintenant ! 
+Merci pour ton coup de main j'espère que les habitants sont satisfait ! 
+Ramène l'avion au hangar et demain c'est repartie pour la capitale !
+... Je dois te dire merci, c'étais surement la dernière livraison avant que la montée des eaux...
+prenne les reste de Yves les flots.
+Tout les habitants en son conscient, mais on beaucoup de fierté, leurs répatriement a déjà été planifié.
+"
 
 * [Continuer] -> final_conclusion
 * [laissez un dernier message] -> last_message
 
 = final_silence
-Les pensées de Meli dérivent vers tous ces gens qu'elle a rencontrés...
-Leurs histoires continueront de vivre, même quand l'eau aura tout recouvert.
+Meryl va surement lui en vouloir mais Meli préfère profiter de l'instant.
+Elle repense au habitant de yves les flots. 
+C'est île est condamné quoi qu'il arrive, on ne peut rien contre la montée des eaux.
+et meme si on pouvais c'est trop tard.
+Mais les habitons eue reste, raconte leurs histoire.
+Peut etre que pour le petit coeur brisé de Meli ça ira aussi malgré la montée des eaux.
 
 * [Continuer] -> final_conclusion
 
 = last_message
+" 1, 2, 1, 2... ICI MELI !
+A TOUT LES HABITANTS DE YVES-LES FLOTS !
+C'ÉTAIS LES SERVICES DE MELI-AIRLINE ! 
+MEME SI MA MISSION EST TERMINEE ! N'HESITÉ PAS A DEMANDER MES SERVICES POUR VOS PROCHAIN VOYAGE !
+ET N'OUBLIEZ PAS LE CIEL EST A VOUS ! "
 -> END
 
 = final_conclusion
-// À compléter avec le texte de fin définitif
+( quelque mois plus tard )
 
-"Merci d'avoir joué à Yvelines-les-Flots."
+Meli cours répondre a l'appel de la radio, ça doit être Meryl, c'étais surement ça les étrange bruit dans ses rêves.
+
+"...MELI ! tu répond enfin je t'appelle depuis des heures ! 
+j'ai une bonne nouvelles pour toi !!! tu te souviens le Pet.ite Jean que tu avais rencontré avant l'innondation ?
+Il est devenue ingénieur sur COLLAPS-50 ! passe le féliciter a l'occasion !
+et prépare toi pour ta prochaine mission... Tu quittes l'archipel"
+
+"Merci d'avoir joué a aurevoir Yves les flots."
+
+* [ fin ] -> bye_bye
+
+= bye_bye
+L'eau continua de monté sur yves les flots.
+Une rumeur cours, que depuis les îles alentour on peut capter une radio pirate.
+Passant les sonorité les plus insolite de l'archipel, et partageant les récits les plus loufoques.
+tenu par 2 étrange personnage, le docteur Boogie-love et sa mystérieuse acolytes.
+Certain raconte que c'est l'âme meme de ce que fut Yves les flots qui s'exprime au travers de cette radio.
+Quoi qu'il en soit, il restera de Yves les flot ces gens, et ce qu'il raconteront de leurs vie.
 
 -> END
 
