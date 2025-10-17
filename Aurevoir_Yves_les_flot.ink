@@ -32,7 +32,6 @@ VOTRE SERVITRICE EST LÀ POUR VOUS !!!!"
 ->END
 
 = interruption
-#radio_interface
 
 la radio grésille avant de se stabiliser sur une fréquence claire.
 1, 2... ici meryl, unité d'accompagnement du COLLAPS-40...
@@ -53,12 +52,12 @@ Les habitants sont quasiment tous partis.
 Mais quelques irréductibles attendent le déluge.  
 Ils ont refusé tout relogement."
 
-"Politiquement, c’est tendu.  
-On essaie de ne pas trop attirer l’attention, mais eux reçoivent encore des colis  
-de proches ou d’anciens camarades."
+"Politiquement, c’est tendu...les reste de la guerre civil se font encore sentir.  
+On essaie de faire accepter, donc on livre des colis même ici.
+ils recoivent des colis de proches ou d’anciens camarades."
 
-"Tu as accès au manuel de Boogie-Love,  
-avec les infos sur les îles et leurs habitants.  
+"Tu as accès au manuel de Boogie-Love un habitant.  
+avec les infos sur les îles et leurs habitants.
 Réfère-toi à ça pour les livraisons."
 
 * [Ok, j’ai tout retenu] -> done
@@ -76,7 +75,7 @@ Je fais chauffer la machine. Merci Meryl ! À tout à l’heure !"
 
 = intro_end
 "...Bon voyage Meli.  
-Et... oublie pas de te reposer, vraiment.  
+Et... oublie pas de te reposer...  
 Fin de communication."
 
 * [Faire chauffer le moteur]
@@ -89,13 +88,13 @@ Fin de communication."
 
 {visitedIsland == 0:
     // PREMIER VOL — DÉPART DU HANGAR
-    "Le hangar s’ouvre lentement, laissant place à un ciel d’un bleu éclatant.
+    Le hangar s’ouvre lentement, laissant place à un ciel d’un bleu éclatant.
     C’est le moment. Le moteur vrombit doucement alors que Meli prend de l'altitude.
-    Les premières notes d’une vieille chanson résonnent dans la radio..."
+    Les premières notes d’une vieille chanson résonnent dans la radio...
 - else:
     // TOUS LES AUTRES VOLS
-    "Meli redécolle. Le ciel est plus lourd cette fois-ci.
-    Le vent souffle un peu plus fort, ou est-ce juste dans sa tête ?"
+    Meli redécolle. Le ciel est plus lourd cette fois-ci.
+    Le vent souffle un peu plus fort, ou est-ce juste dans sa tête ?
 }
 
 -> choix_destination
@@ -112,7 +111,7 @@ Fin de communication."
 }
 
 === retour_hub ===
-"Deux livraisons accomplies. Il est temps de rentrer au hub principal pour faire le point."
+Deux livraisons accomplies. Il est temps de rentrer au garage pour faire le point.
 -> interlude
 
 === retour_final ===
@@ -159,7 +158,7 @@ Peut etre que pour le petit coeur brisé de Meli ça ira aussi malgré la monté
 A TOUT LES HABITANTS DE YVES-LES FLOTS !
 C'ÉTAIS LES SERVICES DE MELI-AIRLINE ! 
 MEME SI MA MISSION EST TERMINEE ! N'HESITÉ PAS A DEMANDER MES SERVICES POUR VOS PROCHAIN VOYAGE !
-ET N'OUBLIEZ PAS LE CIEL EST A VOUS ! "
+ET N'OUBLIEZ PAS COLLAPS EST UNE MACHINE POUR TOUS ET TOUTES FAIT POUR TOUS ET TOUTES."
 
 * [Continuer] -> final_conclusion
 
@@ -175,8 +174,6 @@ j'ai une bonne nouvelles pour toi !!! tu te souviens le Pet.ite Jean que tu avai
 Il est devenue ingénieur sur COLLAPS-50 ! passe le féliciter a l'occasion !
 et prépare toi pour ta prochaine mission... Tu quittes l'archipel"
 
-"Merci d'avoir joué a aurevoir Yves les flots."
-
 * [ fin ] -> bye_bye
 
 = bye_bye
@@ -188,6 +185,11 @@ tenu par 2 étrange personnage, le docteur Boogie-love et sa mystérieuse acolyt
 Certain raconte que c'est l'âme meme de ce que fut Yves les flots qui s'exprime au travers de cette radio.
 Quoi qu'il en soit, il restera de Yves les flot ces gens, et ce qu'il raconteront de leurs vie.
 
+*[remerciement] -> thanks
+
+= thanks
+"Merci d'avoir joué a aurevoir Yves les flots. jeu fait par amour et avec amours par ShelbyZord
+Merci a la trap, au marxisme, et tout ceux qui ont lutté pour l'internationalisme prolétarien."
 -> END
 
 === destination_normale ===
@@ -228,7 +230,7 @@ Ce manuel est **spécial**, conçu par mes soins pour les besoins des habitants 
 * [Décoller] -> vol
 
 = boogie
-~ knowledgeMF = true
+~ knowledgeMD = true
 
 INFORMATION RÉSIDENT : Docteur Boogie-Love est un excentrique... c’est moi !  
 Hehehe. J’espère t’avoir surpris·e.  
@@ -236,7 +238,7 @@ Je suis fan de musique et j’ai toujours une histoire mystérieuse à raconter 
 
 INFORMATION LIEU : J’habite sur l’île la plus cool.  
 Y a des disques partout et une enseigne géante en forme de disque (pas celle en coquille Saint-Jacques — l’autre !).  
-C’est là que je tiens mon disquaire "**CRAZY-LOVE**". Des sons comme t’en as jamais entendu !
+C’est là que je tiens mon disquaire "CRAZY-LOVE". Des sons comme t’en as jamais entendu !
 
 COLIS À LIVRER : Le colis scellé par le Syndicat, c’est pour moi. Apporte-le, et je te satisferai ta curiosité...
 
@@ -270,7 +272,7 @@ C’est du matos de soudure et d’électronique. Iel est malin·igne : laisse-i
 INFORMATION RÉSIDENT : Le plus old-school du coin.  
 Aujourd’hui, des vieux aigris comme lui, on en voit plus beaucoup.  
 Il tient une ferme, râle tout le temps, mais il est pas méchant. C’est le grand-père de Pet.ite Jean.  
-Ses vaches ? Sujet sensible... tu verras !
+ses vaches...Sujet sensible... tu verras !
 
 INFORMATION LIEU : Une île classique : un champ, une ferme, du bétail, un moulin. Simple et rustique.
 
@@ -282,18 +284,19 @@ COLIS À LIVRER : Une lettre de sa fille et un peu d’engrais. Rien d’extraor
 * [Décoller] -> vol
 
 = karim_huguette
-~ knowledgeMD = true
+~ knowledgeMBI = true
 
 INFORMATION RÉSIDENT : Deux anciens soldats.  
 Ils vivaient ici avant l’inondation, mais sont partis faire la guerre contre l’ancien régime.  
-Ils en sont revenus changés... et probablement bien éméchés 😅
+Ils en sont revenus changés...et maintenant ils se la colle comme c'est pas permit.
+C'est des éternels nostalgique de la révolution, passe écouter leurs histoires !
 
-INFORMATION LIEU : Le bistrot "**La Gamberge**". Impossible de le rater :  
+INFORMATION LIEU : Le bistrot "La Gamberge". Impossible de le rater :  
 y a des chaises et des tables dehors...  
 et surtout des drapeaux du Syndicat partout ! Ces gars-là sont convaincus !  
 Va boire un coup avec eux.
 
-COLIS À LIVRER : Une lettre et une caisse d’alcool. Les classiques du réconfort.
+COLIS À LIVRER : Une lettre et une caisse d’alcool. je pourrais en écrire une chanson.
 
 * [Lire la description de Boogie-Love] -> boogie
 * [Lire la description de Pet.ite Jean] -> petite_jean
@@ -302,10 +305,11 @@ COLIS À LIVRER : Une lettre et une caisse d’alcool. Les classiques du réconf
 
 
 === bosquet ===
-Tu arrives au-dessus d’une île verdoyante, remplie d’arbres.  
-Au milieu, tu repères un étrange tank rouge, hors d’usage.  
-Dessus, un·e enfant fixe le ciel en silence, entouré·e d’outils de construction, de bricolage et autres bidouilles.
-
+Tu arrives au-dessus d’une île verdoyante, remplie d’arbres.
+tu repère au alentour sous l'eau un chemin qui as l'air d'avoir été éffacé par la montée des eaux.
+Au milieu de la marée d'arbres, tu repères un étrange tank rouge, hors d’usage.
+Assis dessus, un·e enfant fixe le ciel en silence, entouré·e d’outils de construction, de bricolage et autres bidouilles.
+Tu poses l'avions non loin de l'îlot, et tu descends.
 Le silence est lourd… mais tu l’entends brisé par de petits “zib… zib… zab…” répétés.
 
 *[Commencer à lui poser des questions] -> question
@@ -343,23 +347,18 @@ Pas sûr qu’il faille trop traîner ici…
     C'étais autrefois rattaché a la ferme pas loin, celle de mon grand père le vieux jean maintenant elle est isolé on ne peut venir ici que en barque....
     (tu peux sentir de l'excitation dans ses yeux) ...ou en venant avec le glorieux COLLAPS
     -else:
+    il prend du temps a répondre, il étais très concentré a faire d'être bruit.
     … Oui, c’est moi.  
-    Désolé·e, j'étais occupé.e a communiquer avec les aliens…je crois ? en tout cas j'essaye de comprendre comment faire ?
+    Désolé·e, j'étais entrain d'essayer de communiquer avec un alien…je crois ?
+    en tout cas j'essaye de comprendre comment faire ?
 
 }
 
 *[Lui poser une autre question] -> question
 *[Comment ça, “aliens” ?] -> alien
+{knowledgeMB == false:
 *[...Le glorieux COLLAPS ?] -> glorieux
-
-= glorieux
-
-(iel te regarde de haut en bas avec un air jugeur.euse) ...Toi tu déplace avec le COLLAPS-40.
-je connais mal toute l'histoire, mais les premier scientifique du syndicat ont été recruté pour travailler sur le programme COLLAPS.
-l'ancien ordre en avais besoin pour ces échanges économique ça a finit par se retourner contre eux.
-Le syndicat a vite compris comment utiliser les ondes particulières qui y'a sur toute la grande archipel. et crèere les tours radio. 
-
-*[Lui poser une autre question] -> question
+}
 
 = alien
 Oui, des aliens… Je suis persuadé·e qu’il y en a un pas loin d’ici.  
@@ -371,25 +370,51 @@ Je le crois pas trop… mais les aliens, si. Alors j’essaie de leur parler.
 
 
 = alien2
-Non… pour l’instant, ils me rejettent.  
-Mais je travaille à devenir une machine pour mieux leur parler.  
+Non… pour l’instant, ils me rejettent...
+Je travaille à devenir une machine pour mieux leur parler en ce moment.  
 Je me dis qu’ils seraient plus ouverts si j’étais moi-même une machine.
-...je pense qu'ils sont trop timides c'est pour ça qu'ils refusent de discuter
+...je pense qu'ils sont trop timides c'est pour ça qu'ils refusent de discuter.
+
+*[Lui poser une autre question] -> question
+*[...pourquoi il serait timide ?] -> alien3
+
+= alien3
+Pourquoi moi je le suis ? 
+personne ne sais répondre a ce genre de question.
+Ils se cachent surement parce que les humains sont un peu bizarres.
+Je peux les comprendre, moi aussi j'ai du mal avec les humains.
+Si j'étais un genre de robot je remplierais mieux mes missions.
+
+*[Lui poser une autre question] -> question
+*[...c'est un peu jeune pour accomplir des mission non ? ] -> age
+
+= glorieux
+
+(iel te regarde de haut en bas avec un air jugeur.euse) ...Toi tu déplace avec le COLLAPS-40.
+je connais mal toute l'histoire, mais les premier scientifique du syndicat ont été recruté pour travailler sur le programme COLLAPS.
+l'ancien ordre en avais besoin pour ces échanges économique ça a finit par se retourner contre eux.
+Le syndicat a vite compris comment utiliser les ondes particulières qui y'a sur toute la grande archipel. et crèere les tours radio. 
 
 *[Lui poser une autre question] -> question
 
+= age
+Non, j'ai l'âge requis.
+Et je n'aime pas trop les activités humaines, j'aime construire des trucs, des machines.
+le rythme des bip, des machines, la forme des composant m'apaise.
+ma misson est de leurs parler leurs donnez un amours passionnelles.
+*[lui poser une autre question] -> question
 
 = robot
 
 ...j'aimerai oui.
 Malheureusement, je peux pas me transformer en robot… Ma mère s’inquiéterait trop.
-moi je ne suis pas comme les vieux, les aliens, les machines et les pronoms ça me fait pas trop peur.
+moi je ne suis pas comme les humains, les aliens, les machines et les pronoms ça me fait pas trop peur.
 fin si certaines machine peuvent faire peur mais bon je m'éloigne du sujet.
 Un jour j'ai promis a ma mère que je deviendrais un cyborg...elle l'a tellement mal pris.
 Qu'elle m'a envoyé ici pour des vacances en espérant que j'oublie ces histoires.
-Elle penserai que le coté anti syndicat de grand-père l'aiderai.
+ça n'as pas bien fonctionné, mais je me suis lié d'amitié avec mon grand père et ceux gros tank rouge.
 
-*[Un robot genre… comme les COLLAPS ?] -> robot_2
+*[Te transformer en robot genre… comme les COLLAPS ?] -> robot_2
 *[Lui poser une autre question] -> question
 
 
@@ -433,6 +458,7 @@ Ce bosquet, avant, était relié directement à son île… c’est ce qu’il m
 Et il sait que je bidouille des trucs. Il trouve ça cool même.
 À vrai dire c'est surement le seul de la famille à trouver ça cool.
 
+*[Lui poser une autre question] -> question
 *[Il s’inquiète pas ?] -> peur
 
 
@@ -448,15 +474,18 @@ Ils comprennent pas pourquoi je veux devenir un androïde.
 Alors je viens ici, grand-père dit rien, je dis rien.  
 Des fois on parle, des fois pas. Et c’est très bien comme ça.
 
+*[Lui poser une autre question] -> question
 *[Ton papy accepte que tu deviennes un robot ?] -> robot_end
-
 
 = robot_end
 Oui, papy l’accepte.  
-Il a peur du Syndicat et de la radio, il est persuadé que le système finira par se retourner contre nous.  
-Mais quand je lui ai dit que je voulais rejoindre le Syndicat pour créer une machine autonome, impossible à contrôler par eux, il a été rassuré.
-À vrai dire j'ai rien contre le syndicat.
-...mais si j'étais un robot je crois que je n'aimerai pas trop être dépendant d'un maître qui me forcerait à me détourner de mamission pour ses petits besoins.
+Il a peur du Syndicat et de la radio, il est persuadé que le syndicat finira par se retourner contre nous.
+Il radote souvent que le syndicat a été le bras armée du PPN avant que le PPN négocie avec l'ordre.
+Il les a soutenus pendant la guerre de libération, mais il est resté critique de leurs méthodes tout du long.
+Mais quand je lui ai dit que je voulais rejoindre le Syndicat pour créer une machine autonome, impossible pour le peuple, fait par le peuple, il a été rassuré.
+.. À vrai dire moi j'ai rien contre le syndicat.
+...mais si j'étais un robot je crois que je n'aimerai pas trop être dépendant d'un maître qui me forcerait à me détourner de ma mission pour ses intérêts.
+je crée uniquement pour le bien de tous.
 
 *[Lui poser une autre question] -> question
 
@@ -471,7 +500,7 @@ Même si mon grand-père a peur de vous, je te promets — pour te remercier de 
 
 Pas sûr que cette promesse te fasse que du bien…  
 Mais le gamin est tellement enthousiaste que c’en est contagieux.
-Tu décides de ne pas répondre, et tu décolles.
+Tu décides de ne pas répondre, signe de main et tu décolles vers l'horizon.
 ~ knowledgeB = true
 *[Retourner dans l’avion] -> vol
 
@@ -483,15 +512,16 @@ Tu décides de ne pas répondre, et tu décolles.
 tu finis par atterir sur un ilot, ou il est disposé quelque tables, et des chaisses proteger par une terasse.
 proche d'un batiment qui prend la forme d'un bistro, tu reconnais une enseigne : LE GAMBERGE
 
-sur une table une femme et un homme discute une bouteille face a eue, tu remarques des élèments du syndicat, un peu partout.
-Un drapeau du syndicat qui flotte au gré du vent, sur une table grossièrement posé, tu peux voir une statue du leader de la révolution. érigée après la guerre contre l'Ordre défeline.
-une affichage de propagande... du Syndicat pendant la guerre contre l’Ordre Défeline est aussi exposé sur l'avant du bistro.
+sur une table une femme et un homme discute une bouteille face a eue.
+Un drapeau du syndicat qui flotte au gré du vent, sur une table grossièrement posé, tu peux voir une statue du leader de la révolution. 
+une affichage de propagande... du Syndicat glorifiant les bienfait du système COLLAPS.
 
-*[Commencer à lui poser des questions] -> bistro_question
+*[Commencer à poser des questions] -> bistro_question
 
 = bistro_question
 Tu as des colis à livrer et des missions à remplir.  
 Pas sûr qu’il faille trop traîner ici…
+
 
 *[ une bouteille a cet heure?] -> bouteille
 * {knowledgeMBI == false} [...c'est une sorte de bistro ici ?] -> bistro_vide
@@ -504,7 +534,7 @@ Pas sûr qu’il faille trop traîner ici…
 « Oh, tu sais, quand t'as plus grand-chose à faire et une bonne amie avec toi, la boisson devient vite une option acceptable. 
 Faut bien s'occuper, alors parfois on organise des apéros. » répond Karim.
 Huguette renchérit, un peu piquée : « Oh, la gamine, nous juge pas parce que t'as enfilé le costume ! 
-Nous aussi on est passés par là — on regardait pas les gens de haut. »
+Nous aussi on est passés par là — on regardait pas les gens de haut ! »
 
 *[La traiter de vieille folle] -> folle
 
@@ -514,7 +544,7 @@ Nous aussi on est passés par là — on regardait pas les gens de haut. »
 = folle
 Karim éclate de rire. Huguette, après un petit sourire gêné, secoue son ami.
 
-« Hé ! Déjà qu'on manque de respect, t'as pas intérêt à te mettre de son côté !
+« Hé ! Déjà qu'on me manque de respect, t'as pas intérêt à te mettre de son côté !
 Foutu révisionniste incapable de tenir un engin ! » dit-elle en le bousculant.
 
 Karim se remet à rire aux éclats.
@@ -524,15 +554,32 @@ Karim se remet à rire aux éclats.
 
 
 = folle_2
-Il se retourne vers toi, tout fier, il pointe le drapeau. Huguette prend la parole.
-« Et ouais, gamine — figure-toi qu'on est d'anciens soldats du Syndicat, ehhhh ouais ! 
+Il se retourne vers toi, tout fier, il pointe le drapeau du syndicat. Huguette prend la parole.
+« Et ouais, gamine — figure-toi qu'on est d'anciens soldats du Syndicat, ehhhh ouais !
 On est partis quand on était jeunes. 
-On a aidé à repousser l’armée de DeFeline.
-Après la victoire contre DeFeline, le Parti pour la Nation a pris le pouvoir. On croyait à leurs promesses, mais ça n’a pas duré.»
+On a menée une guerre de libération contre les traitre du PPN soutenue par Defeline.
+Le syndicat étais la seule force capable de lutter pour le peuple contre l'ordre et le PPN."
+
 elle marque un temps d'hésitation. boit un coups et reprend 
 «...en tout cas Sois sûr qu'ils ne viendront plus nous embêter !
 Maintenant on se la coule douce, on se repose et on repense aux bons vieux temps, quand on se battait contre les fascistes de DeFeline. »
 Un sourire nostalgique se dessine sur leurs visages.
+
+*[Leur poser d'autres questions] -> bistro_question
+*[...DeFeline ?] -> defeline
+*[... c'est quoi le lien entre le Syndicat et le PPN ?] -> S_T_C
+
+= S_T_C
+
+Karim vois que tu es intéréssé et peu formé il reprend :
+
+"Dans notre jeunese le PPN et le syndicat des travailleur du collaps ( S_T_C ) étais déjà scindé.
+Mais bien avant notre naissance le S_T_C étais le bras armée du PPN quand il luttais pour l'indépendance de l'archipel.
+Il étais née de l'apparition d'une classe ouvrière sur l'archipel, et de la volonté de s'organiser politiquement face a l'ordre Defeline.
+Le PPN étais une façade institiutionnel qui étais née dans un processus de médiation entre les député de Defeline.
+Puis quand le PPN c'est installé au pouvoir, il pouvais négocié des contrat avantageux qui bénéficié au cadre du partie.
+Le syndicat avais pris en autonomie politique, et prévoyais ce scénario, ils ont toujours été pour l'organisation par les travailleurs de gallia.
+Une guerre civil de 10 ans a éclaté, et nous avont pris les armes."
 
 *[Leur poser d'autres questions] -> bistro_question
 *[...DeFeline ?] -> defeline
@@ -553,10 +600,11 @@ On s'est battus pour que les îles gardent leur liberté. »
 
 *[Leur poser d'autres questions] -> bistro_question
 
+
 = bistro_vide
 {knowledgeMB == false:
     ... les deux habitant esquissent un grand sourire après vous avoir regardé de haut en bas. la femme parmi les deux prend la parole et dis
-    " ça n'a pas bien révisé son brief a ce que je vois hahaha c'est notre bistro...enfin ça l'est devenue on la récupéré."
+    " ça n'a pas bien révisé son brief a ce que je vois ( elle se met a rire ) c'est notre bistro...enfin ça l'est devenue on la récupéré."
     -else:
         Karim et Huguette esquissent un sourire, mais paraissent un peu moins à l'aise.
 
@@ -580,7 +628,7 @@ Il nous l'a dit lui-même quand on l'a croisé avec Karim, continue Huguette. «
 comme beaucoup de nos camarades...
 On a décidé de reprendre son bistro, C’était juste après la guerre, pendant la grande inondation… quand tout le monde croyait que la paix durerait.
 Même sans habitants, ça nous tenait à cœur de revenir au Gamberge.
-Au final, on est jamais repartis, haha. On se la coule douce ici tant que l'eau ne nous a pas submergés. »
+Au final, on est jamais repartis. On se la coule douce ici tant que l'eau ne nous a pas submergés. »
 
 *[Leur poser d'autres questions] -> bistro_question
 
@@ -599,7 +647,8 @@ Après la guerre, le Syndicat voulait tourner la page… Beaucoup comme Simon se
 Après quelques verres, vous êtes tous un peu pompette. Tu commences à te dire que l'alcool pourrait compromettre ta capacité à revoler — Meli repense à Meryl qui lui avait dit de faire attention.
 
 Huguette se penche vers toi et te demande directement :  
-« Mais toi, gamine, comment t'es retrouvée à bosser pour le Syndicat ? Pas de discours patriote — qu'est-ce qui t'a vraiment amenée ici ? »
+« Mais toi, gamine, comment t'es retrouvée à bosser pour le Syndicat ?
+Pas de discours patriote — qu'est-ce qui t'a vraiment amenée ici ? »
 
 *[Leur dire la vérité] -> verite
 *[Leur poser d'autres questions] -> bistro_question
@@ -608,22 +657,33 @@ Huguette se penche vers toi et te demande directement :
 = verite
 Meli marque un temps d'arrêt. Elle hésite : elle n'a pas souvent envie de parler d'elle, mais Huguette a l'air gentille.
 
-« J'ai vécu une rupture amoureuse difficile il y a quelque temps. C'est probablement de ma faute. Je regrette beaucoup, mais j'aimerais passer à autre chose. Sur l'archipel, c'est mal vu de ne rien faire. Devenir pilote pour le Syndicat, ça m'a forcée à sortir de chez moi et à renouer du lien social. »
+« J'ai vécu une rupture amoureuse difficile il y a quelque temps.
+C'est probablement de ma faute.
+Je regrette beaucoup, mais j'aimerais passer à autre chose.
+Sur l'archipel, c'est mal vu de ne rien faire.
+Devenir pilote pour le Syndicat, ça m'a forcée à sortir de chez moi et à renouer du lien social. »
 
-Huguette te regarde avec tendresse, Karim écoute en silence. Huguette s'approche ; son odeur t'entoure et elle semble vouloir te câliner. Tu n'es pas habituée au contact physique, mais tu sens que tu en as besoin.
+Huguette te regarde avec tendresse, Karim écoute en silence.
+Huguette s'approche ; son odeur t'entoure et elle semble vouloir te câliner.
+Tu n'es pas habituée au contact physique, mais tu sens que tu en as besoin.
 
 *[Accepter le câlin ?] -> calin
 *[Leur poser d'autres questions] -> bistro_question
 
 
 = calin
-« J'ai connu ça il y a quelques années, hahaha — c'est pas simple. Prends ton temps, gamine. Cette douleur ne disparaîtra pas avec le boulot. 
-Tu peux visiter les plus belles îles de l'archipel, lunettes d'aviateur sur le nez, une mission qui te semble noble… mais tout ça peut cacher ta peine.
+« J'ai connu ça il y a quelques années ( il rigole amérement ) — c'est pas simple. Prends ton temps, gamine.
+Cette douleur ne disparaîtra pas avec le boulot. 
+Tu peux visiter les plus belles îles de l'archipel, lunettes d'aviateur sur le nez, une mission qui te semble noble…
+mais tout ne cachera pas ta peine.
 Prends le temps de te soigner, de cicatriser. »
 
-Meli ne peut empêcher un sanglot de s'échapper ; elle pleure en serrant Huguette. Après un long silence, tu quittes ses bras.
+Meli ne peut empêcher un sanglot de s'échapper
+elle pleure en serrant Huguette.
+Après un long silence, elle quittes ses bras.
 
-« T'inquiète pas pour l'alcool si tu veux partir : les effets sont normalement déjà dissipés. Cet alcool est pensé pour ne pas durer — pour les membres du Syndicat qui doivent vite retourner au travail. »
+« T'inquiète pas pour l'alcool si tu veux partir : les effets sont normalement déjà dissipés.
+Cet alcool est pensé pour ne pas durer — pour les membres du Syndicat qui doivent vite retourner au travail. »
 
 *[Leur poser d'autres questions] -> bistro_question
 
@@ -668,7 +728,7 @@ Pas sûr qu’il faille trop traîner ici…
 * [Lui donner son colis] -> conclusion_disquaire
 
 = intro
-{knowledgeMD == false:
+{knowledgeMD :
     "Yes, YES, YES ! C’est moi, Docteur CRAZY-LOVE !  
     Je suis un peu pris actuellement, j’expérimente de nouvelles ondes !!!  
     Mais j’apprécie que tu aies pris le temps de feuilleter mon manuel, YO !  
@@ -737,18 +797,17 @@ Bref… ton destrier est la plus belle preuve de son empreinte sur ce monde."
 
 (Il se met à tousser — crier autant, à son âge, ça laisse des traces.)  
 
-"En vérité, je suis un fan de musique excentrique, hahaha !  
+"En vérité, je suis un fan de musique excentrique !  
 Je décortique les sons et les ondes pour comprendre ce qu’ils cachent, comment les soigner, les entretenir.  
 Je m’occupe aussi de la tour radio de Yves-les-Flots, vu que le S.T.C. passe rarement par ici…  
-SOIT LA MAJORITÉ DU TEMPS, HAHAHA !  
-
+SOIT LA MAJORITÉ DU TEMPS!" il rigole a gorge déployée de sa propre blague. 
 JE SUIS UN DOCTEUR DU SON, DE L’ONDE !"
 
-* [OH mais c’est vous, le manuel !] -> revelation
+* {not knowledgeMD} [OH mais c’est vous, le manuel !] -> revelation
 * [Lui poser une autre question] -> disquaire_question
 
 = revelation
-"Hahaha, et oui !  
+"et oui !  
 Je le mets même régulièrement à jour, notamment pour les commandes pirates de Pet.ite Jean.  
 J’entretiens aussi la tour du coin.  
 
@@ -767,7 +826,7 @@ Ils pensaient pas que trois habitants lutteraient autant pour rester ici.
 C’ÉTAIT SANS COMPTER L’AMOUR UNIQUE QUI LIE LES CŒURS MORCELÉS DE YVES-LES-FLOTS !  
 
 (Il tousse encore, mais rigole cette fois.)  
-Pas mal celle-là, je devrais la noter, hahaha !  
+Pas mal celle-là, je devrais la noter ! ( il rigole encore )   
 
 Ils ont juste mis en place une mission de bénévolat périodique pour nous livrer des colis.  
 Mais les lois… ici, elles n’existent plus vraiment.  
@@ -819,15 +878,14 @@ Et puis, après, venait toujours le silence… lourd, étouffant."
 Je parle pas que d’Yves-les-Flots, mais de Gallia en entier.  
 Le PPN, tu en as entendu parler ?"
 
-* [Avec plaisir !] -> histoire
+* [peu de chose...] -> histoire
 * [Lui poser une autre question] -> disquaire_question
 
 = histoire
-"Gallia, c’était un archipel colonial.  
+"Gallia, c’était un archipel dirigé par un régime colonial.  
 L’empire DeFeline régnait, installé bien loin d’ici.  
-Ils ont fini par se retirer quand les ressources ont commencé à manquer.  
-
-Le **PPN**, le Parti pour la Nation, né à l’époque coloniale, avait poussé à leur départ.  
+Ils sont partis quand l'extraction de ressources devenait trop coûteuse avec la pression du syndicat.  
+Le PPN, le Parti pour la Nation, né à l’époque coloniale et d'un accord avec le syndicat, avait poussé à leur départ.  
 Après la guerre contre DeFeline, ce sont eux qui ont pris le pouvoir."
 
 * [Et la vie sous le PPN, c’était comment ?] -> PPN
@@ -838,11 +896,9 @@ Après la guerre contre DeFeline, ce sont eux qui ont pris le pouvoir."
 
 "Gallia était très pauvre après le départ de DeFeline.  
 Le PPN a promis de moderniser l’archipel, de le rendre autonome.  
-Ils ont lancé le programme COLLAPS pour relier les îles entre elles.  
+Ils ont financé massivement le programme COLLAPS pour relier les îles entre elles.  
 
-Mais en parallèle, ils ont imposé des lois autoritaires.  
-Toute contestation était réprimée.  
-
+Mais en parallèle, ils se sont imposés par la force, par la contre-propagande.  
 (Il ricane.)  
 "Sous le PPN — et encore plus sous DeFeline — un endroit comme Yves-les-Flots n’aurait jamais pu exister."
 
@@ -855,8 +911,9 @@ Toute contestation était réprimée.
 Le Syndicat est né avec l’industrialisation.  
 Des ouvriers, des ingénieurs, des scientifiques qui voulaient une organisation plus juste.  
 
-En réalité, il s’est formé presque spontanément : le PPN perdait le contrôle,  
-tandis que les avancées techniques de COLLAPS ouvraient de nouvelles possibilités."
+En réalité, il s’est formé presque spontanément, il existait déjà avant le PPN, le PPN est née d'une scission avec le syndicat.
+Mais le PPN étais qu'une bande d'opportuniste qui rêvait de leur part du gâteau.
+tandis que les avancées techniques de COLLAPS ouvraient de nouvelles possibilités, et plus de poids politique au syndicat."
 
 * [Et c’est là que ça a dérapé ?] -> tension
 * [Lui poser une autre question] -> disquaire_question
@@ -899,13 +956,14 @@ Quand le PPN a fait exploser un COLLAPS-30 en plein vol…
 Tous les passagers sont morts."  
 
 (Sa voix se durcit.)  
-"Alors le Syndicat s’est rapproché des résistants.  
+"Alors le Syndicat s’est rapproché des résistants autonomistes.  
 Et le **PPC**, le Parti pour COLLAPS, est né."
 
 * [Et là, le conflit est devenu global ?] -> PPC
+* [Lui poser une autre question] -> disquaire_question
 
 = PPC
-(Boogie-Love ouvre grand les yeux, surpris que tu connaisses autant de choses.)  
+(Boogie-Love ouvre grand les yeux, surpris que elle connaisse autant de choses.)  
 
 "Oui. Le PPC était né du feu révolutionnaire.  
 Ouvriers, paysans, anciens du Syndicat…  
@@ -919,6 +977,7 @@ Finalement, DeFeline a décidé de se retirer de Gallia.
 Laissant le PPN seul face au Syndicat."
 
 * [Et c’est là que le Syndicat a gagné ?] -> victoire
+* [Lui poser une autre question] -> disquaire_question
 
 = victoire
 (Boogie-Love sourit amèrement.)  
@@ -932,8 +991,8 @@ Le Syndicat prend le reste de l’archipel : les tours radio et le programme COL
 Politiquement, le PPN dirige encore…  
 mais le Syndicat contrôle le travail et la communication.  
 
-Le **PPC** est devenu sa façade démocratique.  
-Le **S.T.C.**, son bras armé.  
+Le PPC est devenu sa nouvelle façade démocratique après la trahison du PPN.  
+Le S.T.C., son bras armé.  
 
 Aujourd’hui, le Syndicat est l’organisation la plus puissante de Gallia.  
 C’est grâce à eux que tu voles dans les cieux…  
@@ -1008,7 +1067,7 @@ C’est le plus beau souvenir que j’aurai jamais d’elle."
 = conclusion_disquaire
 ~ visitedIsland +=1 
 ~ knowledgeD = true
-(Tu lui remets son colis.)  
+(elle lui remet son colis.)  
 
 "Meli, c’est ton nom, pas vrai ?  
 Si jamais tu ne sais plus quoi faire de ta vie…  
@@ -1017,24 +1076,22 @@ Je t’apprendrai à jouer avec les ondes.
 
 Je suis sûr que ça te plairait."  
 
-(Tu le remercies et retournes à ton avion.)  
+(elle le remercie et retourne à son avion.)  
 
 * [Retourner dans l’avion] -> vol
 
 
 === ferme ===
 
-(Tu arrives sur une île, avec un moulin, une petite ferme, et un enclos de vaches.  
+(elle arrives sur une île, avec un moulin, une petite ferme, et un enclos de vaches.  
 Un vieil homme est assis sur une chaise devant la ferme, il te fixe avec méfiance.)
 
-Oh, vous devez être un des chiens de garde du Syndicat !  
-Je vous fais pas confiance, restez bien à votre place et vous avez pas intérêt à toucher à mes vaches !  
-Oui m’sieur… ma p’tiote !
-
+"Oh, vous devez être un des chiens de garde du Syndicat !  
+Je vous fais pas confiance, restez bien à votre place et vous avez pas intérêt à toucher à mes vaches !  "
 -> ferme_question
 
 = ferme_question
-Tu as des colis à livrer et des missions à remplir.  
+elle a des colis à livrer et des missions à remplir.  
 Pas sûr qu’il faille trop traîner ici…
 
 *[Lui dire qu’il a une belle ferme] -> belle_ferme
@@ -1046,7 +1103,7 @@ Pas sûr qu’il faille trop traîner ici…
 *[Tiens ton colis] -> conclusion_ferme
 
 = viel_ami
-(Il a l’air surpris que tu poses cette question. Il marque un temps d’arrêt, puis commence :)  
+(Il a l’air surpris que elle poses cette question. Il marque un temps d’arrêt, puis commence :)  
 "Oui, c’était un vieil ami à moi.  
 À une époque, on faisait les 400 coups ensemble !  
 La vie était vraiment dure à l’époque où l’Ordre DeFeline régnait.  
@@ -1096,15 +1153,20 @@ Il y a quelques années, quand le Parti pour la Nation (PPN) nous menait la vie 
 une petite bande de résistants s’est formée et menait la lutte depuis ici pour se débarrasser du PPN.  
 Ça a déclenché une guerre civile."  
 (Il marque un temps d’arrêt, il semble se souvenir de choses.)  
-"Les résistants ont pris les rênes du Syndicat qui gérait le système COLLAPS.  
+"Les résistants se sont allié au créateur du S.T.C ( le syndicat ) qui gérait le programme COLLAPS.
 Ils étaient prêts à tout pour faire tomber le PPN, soutenu par l’Ordre DeFeline !  
+
+* [il c'est passé quoi ensuite ? ] -> suite
+* [Lui poser une autre question] -> ferme_question
+
+= suite
 Mais cette guerre s’est enlisée.  
 Les révolutionnaires du Syndicat sont devenus de plus en plus violents.  
 Constatant l’état de destruction de l’archipel, ils ont établi un partage du pouvoir :  
 PPN gère la politique globale, et le S.T.C. gère le système COLLAPS et les travailleurs autour.  
 Le PPN vit à la capitale, impose sa politique ailleurs,  
 et le Syndicat régit l’organisation du travail sur tout l’archipel."  
-(Tu sens que son ton devient plus grave. Il fixe le vide, son visage est marqué par la peine.)  
+(elle sens que son ton devient plus grave. Il fixe le vide, son visage est marqué par la peine.)  
 "…Toutes ces vies perdues, ces jeunes qui se sont battus pour un avenir meilleur…  
 Malgré que j’aie aidé le Syndicat, je ne leur ferai jamais confiance !  
 Ce n’est qu’une bande de vieilles élites qui ont exploité les pauvres gens comme moi !"  
@@ -1134,7 +1196,7 @@ ILS NE SONT PAS DE CONFIANCE !"
 
 = negociation
 (Il esquisse un léger sourire, finalement pas si dur à amadouer.)  
-"...Merci, gamine, hahaha.  
+"...Merci, gamine,
 Meli, c’est ça ton nom ? Fais gaffe au Syndicat !  
 Je suis sûr que t’es une de ces jeunes avec plein de rêves patriotiques dans la tête,  
 qui rêve d’un grand archipel interconnecté !  
@@ -1229,13 +1291,10 @@ Meryl veut sûrement prendre des nouvelles, savoir comment tu vas."
 
 = interlude_radio
 "Ici Meryl. Comment ça se passe, Meli ? Les habitants ne sont pas trop difficiles ?"
-
 * ["Non, ils sont géniaux pour l’instant."] -> les_habitants
-* { knowledgeD == true and knowledgeF == true } [...Meryl... je peux en savoir plus sur l’histoire du Syndicat ?] -> syndic
-* { knowledgeF == true and knowledgeB == true } [...Mais au juste, c’est quoi le programme COLLAPS ?] -> COLLAPS
-{ knowledgeMB == false and knowledgeMBI and knowledgeMD == false and knowledgeMF == false:
-    * ["J’ai encore du mal à comprendre ce qui se passe ici."] -> meryl_sermont
-}
+* { knowledgeB or knowledgeF } [...Meryl... je peux en savoir plus sur l’histoire du Syndicat ?] -> syndic
+* { knowledgeF or knowledgeB } [...Mais au juste, c’est quoi le programme COLLAPS ?] -> COLLAPS
+* { not knowledgeMB and  not knowledgeMBI and not knowledgeMD  and not knowledgeMF } ["J’ai encore du mal à comprendre ce qui se passe ici."] -> meryl_sermont
 * [Conclure] -> interlude_fin
 
 
@@ -1254,7 +1313,9 @@ Bon… je résume.
 Le Syndicat des Travailleurs de COLLAPS, ou S.T.C., a été fondé par Beryl et ses camarades,  
 qui bossaient dans les usines liées à COLLAPS.  
 Leurs inventions et la popularité qu’elles ont eue auprès des habitants ont rendu le Syndicat incontournable.  
-Ça a fini par mener à la guerre.  
+Leurs inventions leur ont donné la capacité d'imposer un rapport de force au gouvernement Defeline.
+Certains cadres du S.T.C. créèrent le PPN, Mobulu en tête.
+Ça a fini par mener a une guerre de libération contre le PPN et DeFeline.
 
 Et l’histoire s’est écrite… enfin attends, je relis mes notes…  
 Bref ! Le Syndicat a triomphé. Mais pour garantir la paix sur l’archipel,  
@@ -1268,12 +1329,12 @@ Maintenant, on essaye de consolider tout ça."
 
 = COLLAPS
 (Tu entends Meryl soupirer, puis des feuilles qu’on remue.)  
-"Le programme **COLLAPS** est né il y a quarante ans,  
+"Le programme **COLLAPS** est né il y a un peu plus de quarante ans,  
 quand le PPN et Mobulu ont pris le pouvoir.  
 
-Avant ça, l’archipel était dirigé par l’ordre DeFeline, une grande puissance étrangère.  
+Avant ça, l’archipel était piloté à distance par l’ordre DeFeline, une grande puissance étrangère.  
 Ils exploitaient les habitants et épuisaient les ressources.  
-Quand ils sont partis, Gallia était exsangue.  
+le PPN et le S.T.C les ont poussés vers la sortie mais le PPN finit par trahir.  
 
 Mobulu a promis de reconstruire l’économie.  
 Mais en vérité, ce sont les travailleurs du S.T.C. qui ont créé le système COLLAPS tel qu’on le connaît.  
@@ -1292,10 +1353,10 @@ elle se recharge toute seule et peut naviguer en localisant les signaux radio de
 À vrai dire… je crois que je m’attache à eux.  
 Et c’est sûrement réciproque, vu que je suis, évidemment, géniale."  
 
-{knowledgeBI == true} ... "Bon, j’avoue, j’ai un peu craqué avec Huguette et Karim. Pas très pro, mais ils savent mettre en confiance… et au final, la rupture est plus sensible que je l’imaginais."  
-{knowledgeB == true} ... "Pet.ite Jean est vraiment attachant·e. Je comprends pas toujours ce qu’iel raconte, mais iel m’impressionne. Bon, ses histoires de nous remplacer font un peu peur, mais faut bien croire en l’avenir."  
-{knowledgeD == true} ... "Boogie-Love est carrément mon idole. Si l’archipel n’était pas en train de couler, je crois que je l’aiderais volontiers à étendre sa radio pira–… euh, à tenir son disquaire."  
-{knowledgeF == true} ... "Moi, j’adore ce genre de petits vieux. Je comprends son ressentiment. Sa relation avec son petit-fils m’a beaucoup touchée. C’est pour eux que je veux faire cette mission."  
+{knowledgeBI : ... "Bon, j’avoue, j’ai un peu craqué avec Huguette et Karim. Pas très pro, mais ils savent mettre en confiance…au final...je suis plus sensible que je l’imaginais."  } 
+{knowledgeB : ... "Pet.ite Jean est vraiment attachant·e. Je comprends pas toujours ce qu’iel raconte, mais iel m’impressionne. Bon, ses histoires de nous remplacer font un peu peur, mais faut bien croire en l’avenir."  } 
+{knowledgeD : ... "Boogie-Love est carrément mon idole. Si l’archipel n’était pas en train de couler, je crois que je l’aiderais volontiers à étendre sa radio pira–… euh, à tenir son disquaire."  } 
+{knowledgeF : ... "Moi, j’adore ce genre de petits vieux. Je comprends son ressentiment. Sa relation avec son petit-fils m’a beaucoup touchée. C’est pour eux que je veux faire cette mission."  } 
 
 *{knowledgeBI == true} [Raconter le craquage à Meryl] -> craquage
 *{knowledgeB == true} [Tout mon amour pour Pet.ite Jean] -> amour
@@ -1441,7 +1502,7 @@ Ces gens ont leurs histoires, leurs blessures…
 N’oublie pas qu’on est là pour livrer des colis, pas pour t’immiscer dans leurs vies."  
 
 "Bon, je te laisse reprendre ta mission. Fin de communication."  
-
+~ interlude_finished = true
 * [Retourner à l’avion] -> vol
 
 
